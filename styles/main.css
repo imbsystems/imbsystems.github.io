@@ -2083,37 +2083,37 @@ body {
         margin: 0 auto;
       }
     body {
-      color: #555;
+      color: #212529;
     }
     .next-md-body {
-      color: #555;
+      color: #212529;
     }
     .next-md-body h1, .next-md-body h2 {
-      border-bottom-color: #555;
+      border-bottom-color: #212529;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
       background: #eeeeeefe;
     }h1, h2, h3, h4, h5, h6 {
-      color: #555;
+      color: #212529;
     }
     
     .archive-timeline-title::before {
-      background-color: #555;
+      background-color: #212529;
     }
     
     .post-title-link::before {
-      background-color: #555;
+      background-color: #212529;
     }
     
     .node-title::before {
-      background-color: #555;
+      background-color: #212529;
     }a {
-      color: #555;
+      color: #212529;
     }
     
     .next-md-body a, .friends-box a  {
-      color: #555;
-      border-bottom: 1px solid #555;
+      color: #212529;
+      border-bottom: 1px solid #212529;
     }a:hover {
       color: #222;
     }
@@ -2132,7 +2132,7 @@ body {
       border-bottom-color: #222;
     }
       .nav-item a {
-        color:  #555;
+        color:  #000;
       }.nav-item a:hover {
         color: #222;
       }.nav-item-active {
@@ -2188,10 +2188,10 @@ body {
       background: #000000fe;
     }
     .main-title, .brand {
-      color: #FFF !important;
+      color: #fff !important;
     }
     .mist .site-title i {
-      background: #FFFFFFfe;
+      background: #fffffffe;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
