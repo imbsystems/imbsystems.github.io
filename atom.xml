@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.imbsystems.com</id>
     <title>故城旧马</title>
-    <updated>2020-05-24T15:29:38.533Z</updated>
+    <updated>2020-05-24T15:38:13.873Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.imbsystems.com"/>
     <link rel="self" href="https://www.imbsystems.com/atom.xml"/>
@@ -15,15 +15,23 @@
         <id>https://www.imbsystems.com/hello-wrold/</id>
         <link href="https://www.imbsystems.com/hello-wrold/">
         </link>
-        <updated>2020-05-24T11:32:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏思考了好久，才又写下这些。</p>
+        <updated>2020-05-24T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...<br>
+👏思考了好久，才又写下这些。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏思考了好久，才又写下这些。</p>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...<br>
+👏思考了好久，才又写下这些。</p>
 <!-- more -->
 <p>✍️我本身其实不是一个喜欢静下心写东西的人。从小学开始，每次作文不是不写，就是随便写两句就词穷了。后来中学，布置的日记，也都是敷衍而又潦草的写几笔。至于为何开了博客，大概就是因为新奇吧。</p>
-<p>最早是在2018年，刚刚接触到 WordPress，于是尝试着搭建了一个，但是一个是懒，一个是主机的价格舍不得，于是没写几篇文章就被我关闭了，实在是汗颜。</p>
+<ul>
+<li>最早是在2018年，刚刚接触到 <strong>WordPress</strong>，于是尝试着搭建了一个，但是一个是懒，一个是主机的价格舍不得，于是没写几篇文章就被我关闭了，实在是汗颜。</li>
+</ul>
 <p>中间断断续续的也重开过几次，每次都是匆匆而开，匆匆而闭。主要还是归咎于，我懒吧！🤣</p>
-<p>这次，情况比较特殊。本博客是基于 Github Page 搭建的。所以，目前不会因为我舍不得 Money 而中途暴毙？！</p>
+<ul>
+<li>这次，情况比较特殊。本博客是基于 <strong>Github Page</strong> 搭建的。所以，目前不会因为我舍不得 <em>Money</em> 而中途暴毙？！</li>
+</ul>
 <p>其实之前有在微信开过公众号，毕竟它和博客还是蛮像的（小声BB：我是这么认为的。），不过后来觉得它没有个人网站有 B格啊！毕竟一个只能从微信里找到相应公众号去看，另一个是需要从浏览器里输入个人域名才能访问。</p>
 <p>没错，我就是这么一个爱慕虚荣的人。😂</p>
 <p>其实，写写东西应该还是有好处的吧。能静下心来，梳理一下自己的思绪；能分享一些技巧，给需要的朋友看。</p>
