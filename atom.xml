@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.imbsystems.com</id>
     <title>故城旧马</title>
-    <updated>2020-05-24T15:28:12.418Z</updated>
+    <updated>2020-05-24T15:29:38.533Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.imbsystems.com"/>
     <link rel="self" href="https://www.imbsystems.com/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://www.imbsystems.com/hello-wrold/">
         </link>
         <updated>2020-05-24T11:32:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏思考了好久，才又写下这些。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>👏思考了好久，才又写下这些。</p>
+<!-- more -->
 <p>✍️我本身其实不是一个喜欢静下心写东西的人。从小学开始，每次作文不是不写，就是随便写两句就词穷了。后来中学，布置的日记，也都是敷衍而又潦草的写几笔。至于为何开了博客，大概就是因为新奇吧。</p>
 <p>最早是在2018年，刚刚接触到 WordPress，于是尝试着搭建了一个，但是一个是懒，一个是主机的价格舍不得，于是没写几篇文章就被我关闭了，实在是汗颜。</p>
 <p>中间断断续续的也重开过几次，每次都是匆匆而开，匆匆而闭。主要还是归咎于，我懒吧！🤣</p>
