@@ -2176,16 +2176,16 @@ body {
       color: #e03131;
       border-bottom-color: #e03131;
     }.bg-color {
-      background-color: #e9eceffe;
+      background-color: #f1f3f5fe;
     }
       .site-meta {
-        background: #343a40 !important;
+        background: #000 !important;
       }
       .head-top-line {
-        background: #343a40 !important;
+        background: #000 !important;
       }
     .brand {
-      background: #343a40fe;
+      background: #000000fe;
     }
     .main-title, .brand {
       color: #fff !important;
