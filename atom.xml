@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.imbsystems.com</id>
     <title>故城旧马</title>
-    <updated>2020-06-17T15:23:39.501Z</updated>
+    <updated>2020-06-17T15:27:56.604Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.imbsystems.com"/>
     <link rel="self" href="https://www.imbsystems.com/atom.xml"/>
@@ -254,7 +254,7 @@
 <h4 id="1下载软件">（1）下载软件</h4>
 <p>下载地址：<a href="https://cloud.189.cn/t/ieiUFv7fEJB3"><strong>SrvanyUI</strong></a>  访问码：<strong>wl5f</strong></p>
 <p>Srvany是微软套件的一个小工具,可以手动将程序或其他可执行文件注册为系统服务。但是操作涉及到注册表操作，使用颇为不便。而SrvanyUI是一位大神，封装简化的可视化工具，将原本繁琐的操作，点击几下键盘就能完成。</p>
-<p>下载完成后，将压缩包的文件解压出来，放在一个比较顺手的文件夹，</p>
+<p>下载完成后，将程序放在一个比较顺手的文件夹，</p>
 <h4 id="2-创建服务">(2) 创建服务</h4>
 <p>打开 <strong>SrvanyUI</strong> ，截图如下：</p>
 <img src="https://6wanwan.wodemo.com/entry/533120/20200616/70b3c2f3f544fcba64addaa1cf9286e4/srvanyui-1.png" width="400">
