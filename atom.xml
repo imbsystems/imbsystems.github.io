@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.imbsystems.com</id>
     <title>故城旧马</title>
-    <updated>2020-06-17T15:15:49.213Z</updated>
+    <updated>2020-06-17T15:23:39.501Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.imbsystems.com"/>
     <link rel="self" href="https://www.imbsystems.com/atom.xml"/>
@@ -124,7 +124,7 @@
 <pre><code>vim /home/frp/frps.ini
 </code></pre>
 <p>进入编辑配置文件，按下 <strong>insert</strong> 键，进入编辑模式，将你的配置文件复制进去，检查无误后，按下 <strong>Esc</strong> 退出编辑模式，直接输入 <strong>:wq!</strong> 保存并退出。</p>
-<img src="https://cdn.sspai.com/2020/06/06/bf71a000e0dd5134db1cb30a422c5f42.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" width="960">
+<p><img src="https://cdn.sspai.com/2020/06/06/bf71a000e0dd5134db1cb30a422c5f42.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" width="960"></n></p>
 <blockquote>
 <p>这里搬运一张参考教程里的图片。</p>
 </blockquote>
@@ -261,7 +261,7 @@
 <p>选择左上角工具栏第一个绿色的 <strong>+</strong> 号，开始添加服务，如下图所示，依次选择自建服务，填写完整 <strong>名称</strong> ，<strong>选项</strong> 等内容，然后点击确定，开始使用吧！</p>
 <img src="https://6wanwan.wodemo.com/entry/533120/218bd65b4391be0d58cbd8579964332a/srvanyui-2.png" width="400">
 <p>大功告成！此时，按下 <strong><code>win</code></strong> + <strong><code>x</code></strong> ，点击 <strong>计算机管理</strong> ，打开 <strong>服务和程序</strong> -&gt; <strong>服务</strong> ，看看 FRP 服务是否已经存在并启动了呢！</p>
-<img src="https://6wanwan.wodemo.com/entry/533120/20200616/03f657614eb6d0479cdcaeb33bcfbb49/frp.png" width="600">
+<img src="https://6wanwan.wodemo.com/entry/533120/20200616/03f657614eb6d0479cdcaeb33bcfbb49/frp.png" width="528">
 <h1 id="结尾"><strong>结尾</strong></h1>
 <p>至此，所有步骤都已完成。<br>
 在其他电脑使用 <strong><code>win</code></strong> +** <code>r</code>** 弹出运行窗口，输入 <strong>mstsc</strong> 并确定，打开远程桌面连接，输入你设定的 <strong>域名</strong> : <strong>端口</strong>，如 <strong>frp.xxx.com:7001</strong> ，账户和密码就是你设置的这台被远程客户端的登录账户和密码，连接远程桌面看看吧。</p>
