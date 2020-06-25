@@ -1,555 +1,64 @@
 <!DOCTYPE html>
 <html>
+        <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <title>Hello Gridea！ | 故城旧马</title>
+        <link rel="stylesheet" href="https://www.imbsystems.com/styles/main.css">
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+        <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+         <script >hljs.initHighlightingOnLoad();</script>
 
-<head>
-  <meta charset="UTF-8" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="故城旧马 博客">
-<meta name="description" content="故城旧马，余心余话。">
-<meta name="theme-color" content="#000">
-<title>Hello Gridea！ | 故城旧马</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1593093730209">
-<link rel="stylesheet" href="/styles/main.css">
-<link rel="stylesheet" href="/media/css/pisces.css">
-
-<link rel="stylesheet" href="/media/fonts/font-awesome.css">
-<link
-  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
-  rel="stylesheet" type="text/css">
-
-<link href="/media/hljs/styles/railscasts.css"
-  rel="stylesheet">
-
-<script src="/media/hljs/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
-
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
-
-  <meta name="description" content="Hello Gridea！" />
-  <meta name="keywords" content="Gridea" />
-</head>
-
-<body>
-  <div class="head-top-line"></div>
-  <div class="header-box">
-    
-<div class="pisces">
-  <header class="header  ">
-    <div class="blog-header box-shadow-wrapper bg-color " id="header">
-      <div class="nav-toggle" id="nav_toggle">
-        <div class="toggle-box">
-          <div class="line line-top"></div>
-          <div class="line line-center"></div>
-          <div class="line line-bottom"></div>
-        </div>
-      </div>
-      <div class="site-meta">       
-        <div class="site-title">
-          
-            <a href="/" class="brand">
-              <span>故城旧马</span>
-            </a>  
-          
-        </div>
-        
-          <p class="subtitle">故城旧马，余心余话。</p>
-        
-      </div>
-      <nav class="site-nav" id="site_nav">
-        <ul id="nav_ul">
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/" target="_self">
-                  <i class="fa fa-home"></i> 首页
-                </a>
-              
-            </li>
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/archives/" target="_self">
-                  <i class="fa fa-archive"></i> 归档
-                </a>
-              
-            </li>
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/tags/" target="_self">
-                  <i class="fa fa-tags"></i> 标签
-                </a>
-              
-            </li>
-          
-            
-            
-              
-            
-            <li class="nav-item ">
-              
-              
-                <a href="/post/about/" target="_self">
-                  <i class="fa fa-user"></i> 关于
-                </a>
-              
-            </li>
-          
-          
-            
-              <li class="nav-item ">
-                <a href="/friends/" target="_self">
-                  
-                    <i class="fa fa-address-book"></i> 友情链接
-                  
-                </a>
-              </li>
-            
-          
-        </ul>
-      </nav>
-    </div>
-  </header>
-</div>
-
-<script type="text/javascript"> 
- 
-  let showNav = true;
-
-  let navToggle = document.querySelector('#nav_toggle'),
-  siteNav = document.querySelector('#site_nav');
-  
-  function navClick() {
-    let sideBar = document.querySelector('.sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    navToggle.classList.toggle('nav-toggle-active');
-    siteNav.classList.toggle('nav-menu-active');
-    if (siteNav.classList.contains('nav-menu-active')) {
-      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
-    } else {
-      siteNav.style = "";
-    }
-  }
-
-  navToggle.addEventListener('click',navClick);  
-</script>
-  </div>
-  <div class="main-continer">
-    
-    <div
-      class="section-layout pisces ">
-      <div class="section-layout-wrapper">
-        
-
-<div class="sidebar">
-  
-    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
-      
-        <div class="post-list-sidebar">
-          <div class="sidebar-title">
-            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
-            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
-          </div>
-        </div>
-      
-      <div class="sidebar-body pisces" id="sidebar_body">
-        
-          
-            <div class="post-side-meta" id="post_side_meta">
-              
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">故城旧马</p>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
-        
-        <span class="site-item-stat-count">2</span>
-        <span class="site-item-stat-name">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">3</span>
-        <span class="site-item-stat-name">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">3</span>
-        <span class="site-item-stat-name">标签</span>
-      </a>
-    </div>
-  </div>
-  
-    
-      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
-      </div>
-    
-  
-  
-    <div class="sidebar-item sidebar-item-social">
-      <div class="social-item">
-        
-          
-            <a href="">
-              <i class="fa fa-globe" title=""></i>
-            </a>
-          
-        
-        
-      </div>
-    </div>
-  
-
-
-</div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
-          
-        
-      </div>
-    </div>
-  
-</div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-  }
-
-  postToc && postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-  if (sidebarBody) {
-    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-      let hasFix = false;
-      let scrollEl = document.querySelector('.main-continer');
-      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-      window.addEventListener('scroll', function(e) {
-        if (document.scrollingElement.scrollTop >= limitTop) {
-          if (!hasFix) {
-            sidebar.classList.add('sidebar-fixed');
-            hasFix = true;
-          }
-        } else {
-          if (hasFix) {
-            sidebar.classList.remove('sidebar-fixed');
-            hasFix = false;
-          }
-        }
-      });
-    }
-  }
-  
-</script>
-        <div class="section-box box-shadow-wrapper">
-          <div class="section bg-color post post-page">
-            <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://www.imbsystems.com/post/hello-gridea/">
-      Hello Gridea！
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2018-12-12</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show">分类于</span>
-      
-      
-      <a href="https://www.imbsystems.com/tag/7GsmfV9DR/">
-        <span>Gridea</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>298<span class="pc-show">字数</span></span>
-    </span>
-    
-    
-    
-    <span id="/post/hello-gridea/" data-flag-title="Hello Gridea！" class="meta-item pc-show leancloud_visitors">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-eye"></i>
-      <span>浏览量：<span class="leancloud-visitors-count"></span></span>
-    </span>
-    
-  </div>
-</header>
-            <div class="post-body next-md-body" id="post_body">
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+    </head>
+    <body>
+              <header class="header mdui-m-b-5">      
+            <div class="container  ">
+                <div class="index-title animated fadeInDown mdui-text-center mdui-text-color-white mdui-m-b-2" style="animation-delay: 0.2s"><a href="https://www.imbsystems.com">故城旧马</a></div>
+                <div class="mdui-text-color-white animated fadeInDown mdui-text-center  mdui-m-b-3" style="animation-delay: 0.4s">故城旧马，余心余话。</div>
+           
+            <nav id="nav" class="mdui-text-center animated fadeInDown" style="animation-delay: 0.6s">
+                   
+                            <li><a href="/">首页</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/archives">归档</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/tags">标签</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/post/about">关于</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                  </nav>
+                </div>
+        </header>
+        <div class="mdui-container ">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
+                                <article class="mdui-p-a-2 post animated fadeIn" style="animation-delay: 0.8s;animation-duration: 2s">
+                                    <div class="post-title  mdui-m-b-1">Hello Gridea！</div>
+                                    <div class="mdui-typo-body-2 mdui-m-b-2" datetime="2018-12-12 00:00:00">2018-12-12 / 2 min read</div>
+                                    <div class="mdui-m-b-2 mdui-typo post-neirong"><p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 <!-- more -->
 <p><a href="https://github.com/getgridea/gridea">Github</a><br>
@@ -570,698 +79,87 @@
 <p>未来，它一定会成为你离不开的伙伴</p>
 <p>尽情发挥你的才华吧！</p>
 <p>😘 Enjoy~</p>
-
-            </div>
-            <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      故城旧马
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://www.imbsystems.com/post/hello-gridea/" title="Hello Gridea！">https://www.imbsystems.com/post/hello-gridea/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-  <div class="tags">
-    
-      <a href="https://www.imbsystems.com/tag/7GsmfV9DR/"># Gridea</a>
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-    </div>
-    <div class="nav-next">
-      
-    </div>
-  </div>
 </div>
-            
-  
+                                    <div class="mdui-divider mdui-m-b-2"></div>
+                                    <div class="mdui-row-xs-2 post-fenye">
+                                       
+                                        <div class="mdui-col"> </div>
+                                        
 
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-box">
-  <footer class="footer">
-    <div class="copyright">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
-    </div>
-    <div class="poweredby">
-      Powered by <a href="https://www.imbsystems.com" target="_blank">Imbsystems</a>
-    </div>
-  </footer>
-  
-  
-  <div class="pisces back-to-top" id="back_to_top">
-    <i class="fa fa-arrow-up"></i>
+                                        
+                                        <div class="mdui-col"></div>
+                                       
+                                      </div>
+                                   
+                                    <div class="mdui-divider mdui-m-t-2 mdui-m-b-2"></div>
+                                    
+                                     <script src="https://www.imbsystems.com/media/scripts/Valine.min.js"></script>
+ <div class="comment"></div>
+
+<script>
+      new Valine({
+            el: '.comment',
+
+
+
+            path: window.location.pathname,
+            pageSize: 30,
+            avatar:'mm', 
+       })
+    </script> 
+<script>
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
+                                </article>
+
+                                    
+                        </div>
+                      </div>
     
-    <span class="scrollpercent">
-      <span id="back_to_top_text">0</span>%
-    </span>
-    
-  </div>
-  
-  
-  
-</div>
-<script>
+                
 
-  let sideBarOpen = 'sidebar-open';
-  let body = document.body;
-  let back2Top = document.querySelector('#back_to_top'),
-  back2TopText = document.querySelector('#back_to_top_text'),
-  drawerBox = document.querySelector('#drawer_box'),
-  rightSideBar = document.querySelector('.sidebar'),
-  viewport = document.querySelector('body');
-
-  function scrollAnimation(currentY, targetY) {
-   
-    let needScrollTop = targetY - currentY
-    let _currentY = currentY
-    setTimeout(() => {
-      const dist = Math.ceil(needScrollTop / 10)
-      _currentY += dist
-      window.scrollTo(_currentY, currentY)
-      if (needScrollTop > 10 || needScrollTop < -10) {
-        scrollAnimation(_currentY, targetY)
-      } else {
-        window.scrollTo(_currentY, targetY)
-      }
-    }, 1)
-  }
-
-  back2Top.addEventListener("click", function(e) {
-    scrollAnimation(document.scrollingElement.scrollTop, 0);
-    e.stopPropagation();
-    return false;
-  });
-  
-  window.addEventListener('scroll', function(e) {
-    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
-    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
-      back2Top.classList.add('back-top-active');
-    }
-    if (percent == 0) {
-      back2Top.classList.remove('back-top-active');
-    }
-    if (back2TopText) {
-      back2TopText.textContent = Math.floor(percent);
-    }
-  });
-
-  
-  let hasCacu = false;
-  window.onresize = function() {
-    if (window.width > 991) {
-      calcuHeight();
-    } else {
-      hasCacu = false;
-    }
-  }
-
-  function calcuHeight() {
-    // 动态调整站点概览高度
-    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
-      let sideBar = document.querySelector('.sidebar');
-      let navUl = document.querySelector('#site_nav');
-      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
-      hasCacu = true;
-    }
-  }
-  calcuHeight();
-  
-  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
-
-  if (drawerBox) {
-    let rightMotions = document.querySelectorAll('.right-motion');
-    let right = drawerBox.classList.contains('right');
-
-    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
-
-    let openProp, closeProp;
-    if (right) {
-      openProp = {
-        paddingRight: RIGHT_MOVE_DIS 
-      };
-      closeProp = {
-        paddingRight: '0px'
-      };
-    } else {
-      openProp = {
-        paddingLeft: RIGHT_MOVE_DIS 
-      };
-      closeProp = {
-        paddingLeft: '0px'
-      };
-    }
-
-    drawerBox.onclick = function() {
-      open = !open;
-      window.Velocity(rightSideBar, 'stop');
-      window.Velocity(viewport, 'stop');
-      window.Velocity(rightMotions, 'stop');
-      if (open) {
-        window.Velocity(rightSideBar, {
-          width: RIGHT_MOVE_DIS
-        }, {
-          duration: MOTION_TIME,
-          begin: function() {
-            window.Velocity(rightMotions, transitionDir,{ });
-          }
-        })
-        window.Velocity(viewport, openProp,{
-          duration: MOTION_TIME
-        });
-      } else {
-        window.Velocity(rightSideBar, {
-          width: '0px'
-        }, {
-          duration: MOTION_TIME,
-          begin: function() {
-            window.Velocity(rightMotions, {
-              opacity: 0
-            });
-          }
-        })
-        window.Velocity(viewport, closeProp ,{
-          duration: MOTION_TIME
-        });
-      }
-      for (let i = 0; i < drawerBox.children.length; i++) {
-        drawerBox.children[i].classList.toggle('muse-line');
-      }
-      drawerBox.classList.toggle(sideBarOpen);
-    }
-  }
-
-  // 链接跳转
-  let newWindow = 'true'
-  if (newWindow === 'true') {
-    let links = document.querySelectorAll('.post-body a')
-    links.forEach(item => {
-      if (!item.classList.contains('btn')) {
-        item.setAttribute("target","_blank");
-      }
-    })
-  }
-  // 代码高亮
-  hljs.initHighlightingOnLoad();
-
-</script>
-    <div class="light-box" id="light_box"></div>
-<script>
-  let imgs = document.querySelectorAll('.post-body img');
-  let lightBox = document.querySelector('#light_box');
-  lightBox.addEventListener('mousedown', (e) => {
-    e.preventDefault()
-  })
-  lightBox.addEventListener('mousewheel', (e) => {
-    e.preventDefault()
-  })
-  let width = window.innerWidth * 0.8;
-  lightBox.onclick = () => {
-    let img = lightBox.querySelector('img');
-    lightBox.style = '';
-    img && img.remove();
-  }
-  imgs.forEach(item => {
-    item.onclick = function (e) {
-      let lightImg = document.createElement('img');
-      lightImg.src = this.src;
-      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
-      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
-      lightImg.onclick = function () {
-        lightBox.style = '';
-        this.remove();
-      }
-      lightBox.append(lightImg);
-    }
-  })
-</script>
-  </div>
-</body>
-<input hidden id="copy" />
-<script>
-  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
-  window.Clipboard = (function (window, document, navigator) {
-    var textArea,
-      copy;
-
-    // 判断是不是ios端
-    function isOS() {
-      return navigator.userAgent.match(/ipad|iphone/i);
-    }
-    //创建文本元素
-    function createTextArea(text) {
-      textArea = document.createElement('textArea');
-      textArea.value = text;
-      textArea.style.width = 0;
-      textArea.style.height = 0;
-      textArea.clientHeight = 0;
-      textArea.clientWidth = 0;
-      document.body.appendChild(textArea);
-    }
-    //选择内容
-    function selectText() {
-      var range,
-        selection;
-
-      if (isOS()) {
-        range = document.createRange();
-        range.selectNodeContents(textArea);
-        selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        textArea.setSelectionRange(0, 999999);
-      } else {
-        textArea.select();
-      }
-    }
-
-    //复制到剪贴板
-    function copyToClipboard() {
-      try {
-        document.execCommand("Copy")
-      } catch (err) {
-        alert("复制错误！请手动复制！")
-      }
-      document.body.removeChild(textArea);
-    }
-
-    copy = function (text) {
-      createTextArea(text);
-      selectText();
-      copyToClipboard();
-    };
-
-    return {
-      copy: copy
-    };
-  })(window, document, navigator);
-
-  function copyCode(e) {
-    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-      let code = e.currentTarget.querySelector('code');
-      var text = code.innerText;
-      if (e.srcElement.textContent === '复制成功') {
-        console.log('复制操作频率过高');
-        return;
-      }
-      e.srcElement.textContent = '复制成功';
-      (function (elem) {
-        setTimeout(() => {
-          if (elem.textContent === '复制成功') {
-            elem.textContent = '复制代码'
-          }
-        }, 1000);
-      })(e.srcElement)
-      Clipboard.copy(text);
-    }
-  }
-
-  let pres = document.querySelectorAll('pre');
-  pres.forEach(pre => {
-    let code = pre.querySelector('code');
-    let copyElem = document.createElement('span');
-    copyElem.classList.add('copy-code');
-    copyElem.textContent = '复制代码';
-    pre.appendChild(copyElem);
-    pre.onclick = copyCode
-  })
-</script>
-<script src="/media/js/motion.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 500
-  });
-</script>
-
-<!-- <div class="search-mask" id="search_mask">
-  <div class="search-box">
-    <div class="search-title">
-      <i class="fa fa-search"></i>
-      <div class="input-box">
-        <input type="text" placeholder="搜索">
-      </div>
-      <i class="fa fa-times-circle"></i>
-    </div>
-    <div class="result">
-      
-      <div class="item">
-        <a class="result-title" href="https://www.imbsystems.com/post/2020_06_16_frp/"" data-c="
-          &lt;p&gt;自从建了这个主页，一直没想好写什么东西，正巧碰上远程连接软件 &lt;strong&gt;Team Viewer&lt;/strong&gt; 无法使用的情况， 在对比了多个远程连接软件后，选择了 &lt;strong&gt;Frp&lt;/strong&gt; 作为解决我目前困境的一个方式的同时，也想记录下本次搭建的过程。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;Frp 全名：Fast Reverse Proxy，是一个可用于内网穿透的高性能的反向代理应用，支持 TCP, UDP, HTTP, HTTPS 协议。可以利用Frp内网穿透服务实现穿透处于内网或防火墙后的设备及主机；对外网环境提供 HTTP 或 HTTPS 服务；利用处于内网或防火墙后的机器，对外网环境提供 TCP/UDP 服务等。&lt;/p&gt;
-&lt;p&gt;比如我这次的搭建Frp服务的主要目的就是通过  &lt;strong&gt;Frp&lt;/strong&gt; + &lt;strong&gt;RDP&lt;/strong&gt; 访问处于公司内网环境内的主机，达到远程办公的目的。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这里不得不提一句，&lt;em&gt;&lt;strong&gt;Team Viewer&lt;/strong&gt;&lt;/em&gt; 其实是一个很好用的远程软件，但是不知道为什么从6月开始突然大手笔的封杀了免费版，让我这个日常白嫖党，不禁有些措手不及。在尝试其他多款软件后，始终感觉效果不怎么样，于是，有了这次的实践。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&#34;frp的作用&#34;&gt;&lt;strong&gt;Frp的作用&lt;/strong&gt;&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;利用处于内网或防火墙后的机器，对外网环境提供 &lt;strong&gt;HTTP&lt;/strong&gt; 或 &lt;strong&gt;HTTPS&lt;/strong&gt; 服务。&lt;/li&gt;
-&lt;li&gt;对于 &lt;strong&gt;HTTP&lt;/strong&gt;, &lt;strong&gt;HTTPS&lt;/strong&gt; 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个 80 端口。&lt;/li&gt;
-&lt;li&gt;利用处于内网或防火墙后的机器，对外网环境提供 TCP 和 UDP 服务，例如在家里通过 RDP/SSH 访问处于公司内网环境内的主机。&lt;br&gt;
-&lt;/n&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;搭建过程&#34;&gt;&lt;strong&gt;搭建过程&lt;/strong&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;😝😝终于开始了，上面讲了好多我自己都看不懂的废话。不过，例行介绍还是有必要的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;首先，介绍一下我安装 Frp 的 VPS 及配置，服务器是 GCP 的香港节点，n1 配置，1vCPU 和 0.5G 内存。经过多次尝试，IP 段为 &lt;em&gt;&lt;strong&gt;34.96.x.x&lt;/strong&gt;&lt;/em&gt; ，在我这个小城市的联通延迟还是不错的，ping 大概维持在 70s-90s 上下。系统我选择的是 Ubuntu 18.04 版本。&lt;/p&gt;
-&lt;h2 id=&#34;服务器端&#34;&gt;&lt;strong&gt;服务器端&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;1下载程序&#34;&gt;&lt;strong&gt;1.下载程序&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;前往 Frp 的 &lt;strong&gt;Github releases&lt;/strong&gt; 页面下载最新版的、对应你的 VPS 的处理器架构的包，地址：&lt;a href=&#34;https://github.com/fatedier/Frp/releases&#34;&gt;&lt;strong&gt;Frp内网穿透&lt;/strong&gt;&lt;/a&gt; 。&lt;/p&gt;
-&lt;p&gt;其实目前大多数 VPS 主机商都是使用的 &lt;strong&gt;arm64&lt;/strong&gt; 架构，所以下载时直接选择对应此架构的版本就可以。当然，如果不放心，也可以运行以下命令，查看一下你的 VPS 处理器架构：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  arch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果输出 &lt;strong&gt;x86_64&lt;/strong&gt; 那么就说明是 &lt;strong&gt;arm64&lt;/strong&gt;，即需要下载带 &lt;strong&gt;linux_amd64&lt;/strong&gt; 的那个压缩包；如果输出的是其他的，则在文件列表中寻找 &lt;strong&gt;linux&lt;/strong&gt; 的对应架构的压缩包。记住，右键复制链接。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;本文便以 &lt;em&gt;&lt;strong&gt;arm64&lt;/strong&gt;&lt;/em&gt; 架构举例，截止我写文时， &lt;em&gt;&lt;strong&gt;Frp&lt;/strong&gt;&lt;/em&gt; 最新版是 &lt;em&gt;&lt;strong&gt;v0.33.0&lt;/strong&gt;&lt;/em&gt; 。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;1  ## 切换到你想要 Frp 存放的目录，此处我选择的是 /home 
-2  ## 不要问我为什么，我不懂 Linux 目录结构 ，不知道这个目录的含义
-3  ## 选择它纯粹是因为我搭建的时候看的教程是选择这个目录，你也可以选择其他的目录。
-4  cd /home
-5  ## 从 VPS 中下载 Frp 包
-6  wget --no-check-certificate https://github.com/fatedier/Frp/releases/download/v0.33.0/frp_0.33.0_linux_arm64.tar.gz
-7  ## 解包
-8  tar -xzf frp_0.33.0_linux_arm64.tar.gz
-9  ## 将文件夹名改成 Frp，不然目录太长了，一是记不住，二是也不方便操作
-10  mv frp_0.33.0_linux_arm64 frp
-11  ## 切换到 Frp 目录
-12  cd /frp
-13  ## 执行 chemod 命令，确保 Frps 程序具有可执行权限
-14  chmod +x Frps
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;此处可以尝试运行一下，看看是否能正常运行：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  ./frps -help
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;正常情况下，大概会出现一页的帮助文档信息，这里我就不截图或者 &lt;strong&gt;print&lt;/strong&gt; 下来了，没多大必要，&lt;s&gt;当然不是我懒&lt;/s&gt; 。倘若你没有出现帮助信息，那或许是你下载的版本不对。如果你真的按照我上面的的步骤一步一步下来的话，应该是没问题的，哼🤔！&lt;/p&gt;
-&lt;h4 id=&#34;配置文件&#34;&gt;配置文件&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;文档名称&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;frpc&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;客户端程序&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;frpc.ini&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;客户端配置文件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;frps&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;服务端程序&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;frps.ini&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;服务端配置文件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;理论上整个包中，只有这些文件是有用的。其他的 LICENSE 、frps_full.ini[完整版配置文件] 的基本用不到。&lt;/p&gt;
-&lt;h3 id=&#34;2配置程序&#34;&gt;&lt;strong&gt;2.配置程序&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;你可以参考以下配置说明来书写配置文件 &lt;strong&gt;frps.ini&lt;/strong&gt;，我觉得可以先在电脑上打一份草稿，先列举自己的需求。&lt;br&gt;
-我这里列举了一些必要的、我用到的和你可能用到的配置，如果你想研究完整的配置说明可以看目录下的 &lt;strong&gt;frps_full.ini&lt;/strong&gt; ，以及参考 &lt;a href=&#34;https://github.com/fatedier/frp/blob/master/README_zh.md&#34;&gt;Frp中文说明&lt;/a&gt; 。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  ## 这是是表头，代表配置从这里开始
-2  [common]
-3  ## frp 服务端端口（必须），默认是7000，可以自定义
-4  bind_port = 7000
-5  ## frp 服务端密钥（必须），是服务端与客户端认证的密码
-6  token = 123456789
-7  ## web 仪表盘端口，只有设置了才能使用仪表盘，一般默认就行
-8  dashboard_port = 7500
-9  ## 访问仪表盘的用户名密码，如果不设置，则默认都是 admin
-10  dashboard_user = admin
-11  dashboard_pwd = admin
-12  ## 其实像我仅仅使用 TCP 穿透内网使用远程桌面的话，配置到此结束就可以了
-13  ## 如果你想要用 frp 穿透访问内网中的网站（例如路由器设置页面）
-14  ## 则必须要设置以下两个监听端口，不设置则不会开启这项功能
-15  vhost_http_port = 8080
-16  vhost_https_port = 443
-17  ## 假设此项设置为 example.com，客户端配置 http 时将 subdomain 设置为 frp
-18  ## 设定域名，将 frp.example.com 在你的域名解析商那里解析到你的主机 IP 地址
-19  ## 之后就可以使用此域名来访问你的客户端对应的 HTTP
-20  subdomain_host = example.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;检查没有什么想要增删的后，将配置文件写入 &lt;strong&gt;frps.ini&lt;/strong&gt; 就可以了。这里介绍两种方法，&lt;br&gt;
-（1）你可以使用 &lt;strong&gt;Vim&lt;/strong&gt; 编辑器：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;apt-get vim install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;一路 &lt;strong&gt;Y&lt;/strong&gt; 确认，成功后，&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vim /home/frp/frps.ini
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;进入编辑配置文件，按下 &lt;strong&gt;&lt;code&gt;insert&lt;/code&gt;&lt;/strong&gt; 键，进入编辑模式，将你的配置文件复制进去，检查无误后，按下 &lt;strong&gt;&lt;code&gt;Esc&lt;/code&gt;&lt;/strong&gt; 退出编辑模式，直接输入 &lt;strong&gt;:wq!&lt;/strong&gt; 保存并退出。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.sspai.com/2020/06/06/bf71a000e0dd5134db1cb30a422c5f42.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1&#34; width=&#34;960&#34;&gt;&lt;/n&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这里搬运一张参考教程里的图片。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;（2）使用 &lt;strong&gt;echo&lt;/strong&gt; 命令，直接将 配置文件写入 &lt;strong&gt;frps.ini&lt;/strong&gt; 文档中：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  echo &amp;quot;[common]
-2  bind_port = 7000
-3  token = 123456789
-4  dashboard_port = 7500
-5  dashboard_user = admin
-6  dashboard_pwd = admin
-7  vhost_http_port = 8080
-8  vhost_https_port = 443
-9  subdomain_host = example.com&amp;quot; &amp;gt; frps.ini
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;到此基本结束了，尝试启动一下 &lt;strong&gt;frps&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  ## 使用 -c 参数指定配置文件
-2  ./frps -c frps.ini
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;仔细查看运行后的命令，出现绿色 &lt;strong&gt;success&lt;/strong&gt; 字样，代表配置没有问题，可以正常使用了。此时，可以按下 &lt;strong&gt;&lt;code&gt;Ctrl&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;c&lt;/code&gt;&lt;/strong&gt; 终止程序，进行接下来的配置。&lt;/p&gt;
-&lt;h3 id=&#34;3后台运行和开机自启&#34;&gt;&lt;strong&gt;3.后台运行和开机自启&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;启动&#34;&gt;启动&lt;/h4&gt;
-&lt;p&gt;直接使用上面的命令运行是不行的，当断开 &lt;strong&gt;SSH&lt;/strong&gt; 的时候，程序 &lt;strong&gt;frps&lt;/strong&gt; 就会停止运行，因此可以使用 &lt;strong&gt;nohup&lt;/strong&gt; 来使它在后台运行。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  nohup /home/frp/frps -c /home/frp/frps.ini &amp;amp;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;停止&#34;&gt;停止&lt;/h4&gt;
-&lt;p&gt;停止就使用 &lt;strong&gt;pkill&lt;/strong&gt; ，结束 &lt;strong&gt;frps&lt;/strong&gt; 即可。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  pkill frps
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;重启&#34;&gt;重启&lt;/h4&gt;
-&lt;p&gt;先停止，再启动。&lt;/p&gt;
-&lt;h4 id=&#34;开机自启&#34;&gt;开机自启&lt;/h4&gt;
-&lt;p&gt;对比了网上多种开机自启的方式，我最终选择了 &lt;strong&gt;systemctl&lt;/strong&gt; 来控制，因为很好用，而且还方便，当然，原理我并不清楚，能用就行。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  ## 使用管理员权限编辑系统服务文件
-2  sudo vim /lib/systemd/system/frps.service
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在打开的 &lt;strong&gt;frps.service&lt;/strong&gt; 中写入以下内容，&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  [Unit]
-2  Description=fraps service
-3  After=network.target syslog.target
-4  Wants=network.target
-
-5  [Service]
-6  Type=simple
-7  #启动服务的命令（此处写我们刚才存放 frps 的目录，或者你自定义存放的目录）
-8  ExecStart=/home/frp/frps -c /home/frp/frps.ini
-
-9  [Install]
-10  WantedBy=multi-user.target
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;依照上面的方式保存。&lt;/p&gt;
-&lt;p&gt;那么，接下来就启动吧！&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo systemctl start frps
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;再打开自启动。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo systemctl enable frps
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;重启应用，&lt;em&gt;&lt;strong&gt;sudo systemctl restart frps&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;停止应用，&lt;em&gt;&lt;strong&gt;sudo systemctl stop frps&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;查看应用日志，&lt;em&gt;&lt;strong&gt;sudo systemctl status frps&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;题外话&#34;&gt;题外话&lt;/h3&gt;
-&lt;p&gt;使用 GCP 、阿里云、腾讯云等还需在安全组-入站规则内放开对应的端口，不然会出现客户端无法连接到服务端的情况。具体放开的方法见此：&lt;a href=&#34;https://tools.miku.ac/o/search_help?q=YmFpZHUg5LqR5pyN5Yqh5Zmo5a6J5YWo57uE6K6-572u&#34;&gt;&lt;strong&gt;云服务器安全组设置&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;客户端配置&#34;&gt;&lt;strong&gt;客户端配置&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;1书写配置&#34;&gt;&lt;strong&gt;1.书写配置&lt;/strong&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;基本配置这是整个配置文件的必须&#34;&gt;基本配置，这是整个配置文件的必须&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;1  ## 这个配置的开头，不用管它什么意思，反正必须有
-2  [common]
-3  ## frp 服务端的地址，可以是 IP 也可以是之前解析的域名
-4  server_addr = frp.example.com
-5  ## 服务端设定的端口，即上面服务端配置中的  bind_port
-6  server_port = 7000
-7  ## 服务端设定的密钥，即上面服务端配置中的  token
-8  token = 123456789
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;tcpudp&#34;&gt;TCP/UDP&lt;/h4&gt;
-&lt;p&gt;这里以远程桌面连接为例，&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  ## 自定义的配置名称，格式为 “[名称]” ，放在开头
-2  [RDP]
-3  ## 连接类型，填写 tcp 或 udp ,远程连接一般使用 tcp
-4  type = tcp
-5  ## 本地ip，填你需要转发到的目的ip
-6  ## 如果是转发到frp客户端所在本机（比如远程主机）则填 127.0.0.1
-7  ##否则填对应机器的内网ip
-8  local_ip = 127.0.0.1
-9  ## 需要转发的端口，比如远程连接的端口是 3389
-10  local_port = 3389
-11  ## frp 服务端的远程监听端口，即你访问服务端的 remote_port 就相当于访问
-12  ## 客户端的 local_port ，如果填0则会随机分配一个端口
-13  remote_port = 3390
-14  ## 是否加密客户端与服务端之间的通信，默认是 false
-15  use_encryption = false
-16  ## 是否压缩客户端与服务端之间的通信，默认是 false
-17  use_compression = false
-18  ## 压缩可以节省流量，但需要消耗 CPU 资源
-19  ## 加密自然也会消耗 CPU 资源，但是不大
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;鉴于我只是为了远程桌面连接而配置的 &lt;strong&gt;frp&lt;/strong&gt; ，其他的我没有深入去了解，想了解的可以去&lt;a href=&#34;#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99&#34;&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/a&gt;中自己学习。&lt;/p&gt;
-&lt;h3 id=&#34;2合并配置&#34;&gt;&lt;strong&gt;2.合并配置&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;上面已经将基本我们需要的配置都写出来了，将二者合而为一，然后填写到 &lt;strong&gt;frpc.ini&lt;/strong&gt; 配置文件中。看起来就是这样子的：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1  [common]
-2  server_addr = frp.example.com
-3  server_port = 7000
-4  token = 123456789
-5  [RDP]
-6  type = tcp
-7  local_ip = 127.0.0.1
-8  local_port = 3389
-9  remote_port = 3390
-10  use_encryption = false
-11  use_compression = false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;将下载的对应你的远程主机版本的 &lt;strong&gt;frpc&lt;/strong&gt; 客户端文件，解压在一个方便的位置，例如我的存放位置在&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;c:/frp
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在当前文件夹，按住 &lt;strong&gt;&lt;code&gt;shfit&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;鼠标右键&lt;/code&gt;&lt;/strong&gt; ，在出现的右键菜单中选择 &lt;strong&gt;&lt;code&gt;从此处打开 PowerShell 窗口&lt;/code&gt;&lt;/strong&gt; ，也有可能是 &lt;strong&gt;&lt;code&gt;从此处打开 CMD 窗口&lt;/code&gt;&lt;/strong&gt; ,如果出现的是如下结果，则说明frp客户端启动成功。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;PS C:\frp&amp;gt; ./frpc -c frpc.ini
-2020/06/16 16:25:19 [I] [service.go:282] [34gd169d91sffsa6] login to server success, get run id [34gd169d91sffsa6], server udp port [0]
-2020/06/16 16:25:19 [I] [proxy_manager.go:144] [34gd169d91sffsa6] proxy added: [RDP]
-2020/06/16 16:25:19 [I] [control.go:179] [34gd169d91sffsa6] [RDP] start proxy success
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;记住末尾的 &lt;strong&gt;start proxy success&lt;/strong&gt; 出现这个字样，代表已经启动成功，如果不是这个，就要检查是否配置文件错误，是否与远程服务器连接不通畅。&lt;/p&gt;
-&lt;h3 id=&#34;3开机自启&#34;&gt;&lt;strong&gt;3.开机自启&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;关于 Windows 客户端如何开机自启，网上也有很多方式，什么脚本啊、注册服务啊，多不胜数，这里我介绍一种使用非常简单的方式，纯粹的可视化图形交互界面，简单几步就能将程序注册为系统服务。&lt;/p&gt;
-&lt;h4 id=&#34;1下载软件&#34;&gt;（1）下载软件&lt;/h4&gt;
-&lt;p&gt;下载地址：&lt;a href=&#34;https://cloud.189.cn/t/ieiUFv7fEJB3&#34;&gt;&lt;strong&gt;SrvanyUI&lt;/strong&gt;&lt;/a&gt;  访问码：&lt;strong&gt;wl5f&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Srvany是微软套件的一个小工具,可以手动将程序或其他可执行文件注册为系统服务。但是操作涉及到注册表操作，使用颇为不便。而SrvanyUI是一位大神，封装简化的可视化工具，将原本繁琐的操作，点击几下键盘就能完成。&lt;/p&gt;
-&lt;p&gt;下载完成后，将程序放在一个比较顺手的文件夹，&lt;/p&gt;
-&lt;h4 id=&#34;2-创建服务&#34;&gt;(2) 创建服务&lt;/h4&gt;
-&lt;p&gt;打开 &lt;strong&gt;SrvanyUI&lt;/strong&gt; ，截图如下：&lt;/p&gt;
-&lt;img src=&#34;https://storage.live.com/items/6364F9CA9E81CC88!3455?authkey=AKokgDrs6tJvuHM&#34; width=&#34;400&#34;&gt;
-&lt;p&gt;选择左上角工具栏第一个绿色的 &lt;strong&gt;+&lt;/strong&gt; 号，开始添加服务，如下图所示，依次选择自建服务，填写完整 &lt;strong&gt;名称&lt;/strong&gt; ，&lt;strong&gt;选项&lt;/strong&gt; 等内容，然后点击确定，开始使用吧！&lt;/p&gt;
-&lt;img src=&#34;https://storage.live.com/items/6364F9CA9E81CC88!3453?authkey=AKokgDrs6tJvuHM&#34; width=&#34;400&#34;&gt;
-&lt;p&gt;大功告成！此时，按下 &lt;strong&gt;&lt;code&gt;win&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;x&lt;/code&gt;&lt;/strong&gt; ，点击 &lt;strong&gt;计算机管理&lt;/strong&gt; ，打开 &lt;strong&gt;服务和程序&lt;/strong&gt; -&amp;gt; &lt;strong&gt;服务&lt;/strong&gt; ，看看 FRP 服务是否已经存在并启动了呢！&lt;/p&gt;
-&lt;img src=&#34;https://storage.live.com/items/6364F9CA9E81CC88!3454?authkey=AKokgDrs6tJvuHM&#34; width=&#34;528&#34;&gt;
-&lt;h1 id=&#34;结尾&#34;&gt;&lt;strong&gt;结尾&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;至此，所有步骤都已完成。&lt;br&gt;
-在其他电脑使用 &lt;strong&gt;&lt;code&gt;win&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;r&lt;/code&gt;&lt;/strong&gt; 弹出运行窗口，输入 &lt;strong&gt;mstsc&lt;/strong&gt; 并确定，打开远程桌面连接，输入你设定的 &lt;strong&gt;域名&lt;/strong&gt; : &lt;strong&gt;端口&lt;/strong&gt;，如 &lt;strong&gt;frp.xxx.com:7001&lt;/strong&gt; ，账户和密码就是你设置的这台被远程客户端的登录账户和密码，连接远程桌面看看吧。&lt;/p&gt;
-&lt;h1 id=&#34;参考资料&#34;&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;官方配置使用说明：&lt;a href=&#34;https://github.com/fatedier/frp/blob/master/README_zh.md&#34;&gt;https://github.com/fatedier/frp/blob/master/README_zh.md&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;frp官方中文文档：&lt;a href=&#34;https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html&#34;&gt;https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Frp内网穿透工具的搭建和使用方法：&lt;a href=&#34;https://code.skyheng.com/post/52586.html&#34;&gt;https://code.skyheng.com/post/52586.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;使用 FRP 反向代理实现 Windows 远程连接：&lt;a href=&#34;https://www.cnblogs.com/zhanggaoxing/p/9221705.html&#34;&gt;https://www.cnblogs.com/zhanggaoxing/p/9221705.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;用开源免费的内网穿透工具 frp，实现远程桌面和文件传输 - 少数派：&lt;a href=&#34;https://sspai.com/post/60852&#34;&gt;https://sspai.com/post/60852&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;FRP内网穿透Windows远程桌面：&lt;a href=&#34;https://www.cnblogs.com/ingxx/p/12255241.html&#34;&gt;https://www.cnblogs.com/ingxx/p/12255241.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;SrvanyUI服务管理工具发布：&lt;a href=&#34;https://wangye.org/blog/archives/644/&#34;&gt;https://wangye.org/blog/archives/644/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-">记录一次动手实践 之 搭建FRP穿透服务，实现远程桌面</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" href="https://www.imbsystems.com/post/about/"" data-c="
-          &lt;blockquote&gt;
-&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！❤️&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;关于本站&#34;&gt;🏠关于本站&lt;/h2&gt;
-&lt;p&gt;🤣本博纯粹就是我无聊想不开。&lt;/p&gt;
-&lt;p&gt;现在做一个博客不难，难的在于如何坚持下去，如何写出文章。&lt;/p&gt;
-&lt;p&gt;之前使用 &lt;strong&gt;Wordpress&lt;/strong&gt; 做过一个，但是由于我太懒🤣🤣，服务器的费用也舍不得，所以后来关闭了。&lt;br&gt;
-直到今天无意间发现  &lt;strong&gt;Github Page&lt;/strong&gt; ，于是又一番 &lt;strong&gt;G̶o̶o̶g̶l̶e̶&lt;/strong&gt; 、 &lt;strong&gt;B̶a̶i̶d̶u̶&lt;/strong&gt; 😆后建了这个。&lt;/p&gt;
-">关于</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" href="https://www.imbsystems.com/post/hello-wrold/"" data-c="
-          &lt;p&gt;👏思考了好久，才又写下这些。&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;✍️我本身其实不是一个喜欢静下心写东西的人。从小学开始，每次作文不是不写，就是随便写两句就词穷了。后来中学，布置的日记，也都是敷衍而又潦草的写几笔。至于为何开了博客，大概就是因为新奇吧。&lt;/p&gt;
-&lt;p&gt;最早是在 2018 年，刚刚接触到 &lt;strong&gt;WordPress&lt;/strong&gt;，于是尝试着搭建了一个，但是一个是懒，一个是主机的价格舍不得，于是没写几篇文章就被我关闭了，实在是汗颜。&lt;/p&gt;
-&lt;p&gt;中间断断续续的也重开过几次，每次都是匆匆而开，匆匆而闭。主要还是归咎于，我懒吧！🤣&lt;/p&gt;
-&lt;p&gt;这次，情况比较特殊。本博客是基于 &lt;strong&gt;Github Page&lt;/strong&gt; 搭建的。所以，目前不会因为我舍不得 &lt;em&gt;Money&lt;/em&gt; 而中途暴毙？！&lt;/p&gt;
-&lt;p&gt;其实之前有在微信开过公众号，毕竟它和博客还是蛮像的（小声BB：我是这么认为的。），不过后来觉得它没有个人网站有 &lt;strong&gt;B&lt;/strong&gt; 格啊！毕竟一个只能从微信里找到相应公众号去看，另一个是需要从浏览器里输入个人域名才能访问。&lt;/p&gt;
-&lt;p&gt;没错，我就是这么一个爱慕虚荣的人。😂&lt;/p&gt;
-&lt;p&gt;其实，写写东西应该还是有好处的吧。能静下心来，梳理一下自己的思绪；能分享一些技巧，给需要的朋友看。&lt;/p&gt;
-&lt;p&gt;不过，碍于我的文笔，可能我也不会写出什么有价值的来。所以，大概也就是自己玩玩而已。&lt;/p&gt;
-&lt;p&gt;其实能写这么多，已经让我头疼。已经体会到那些网文作者哭喊卡文的痛楚，而且，我这还是一篇简简单单的前言。所以，就暂时到这儿吧。&lt;/p&gt;
-&lt;p&gt;那么，诸君，努力吧！&lt;/p&gt;
-&lt;p&gt;谨以此歌，献给自己，献给你们。&lt;/p&gt;
-&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=340 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=411214279&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;">Hello Wrold!</a>
-      </div>
-      
-      <div class="item">
-        <a class="result-title" href="https://www.imbsystems.com/post/hello-gridea/"" data-c="
-          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
-✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
-&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
-&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
-&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
-&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
-&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
-&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
-&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
-&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
-&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
-&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
-&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
-&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
-&lt;p&gt;😘 Enjoy~&lt;/p&gt;
-">Hello Gridea！</a>
-      </div>
-      
-    </div>
-  </div>
-</div>
-<script>
-  // var escape = "[{&#34;content&#34;:&#34;&lt;p&gt;自从建了这个主页，一直没想好写什么东西，正巧碰上远程连接软件 &lt;strong&gt;Team Viewer&lt;/strong&gt; 无法使用的情况， 在对比了多个远程连接软件后，选择了 &lt;strong&gt;Frp&lt;/strong&gt; 作为解决我目前困境的一个方式的同时，也想记录下本次搭建的过程。&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;p&gt;Frp 全名：Fast Reverse Proxy，是一个可用于内网穿透的高性能的反向代理应用，支持 TCP, UDP, HTTP, HTTPS 协议。可以利用Frp内网穿透服务实现穿透处于内网或防火墙后的设备及主机；对外网环境提供 HTTP 或 HTTPS 服务；利用处于内网或防火墙后的机器，对外网环境提供 TCP/UDP 服务等。&lt;/p&gt;\n&lt;p&gt;比如我这次的搭建Frp服务的主要目的就是通过  &lt;strong&gt;Frp&lt;/strong&gt; + &lt;strong&gt;RDP&lt;/strong&gt; 访问处于公司内网环境内的主机，达到远程办公的目的。&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;这里不得不提一句，&lt;em&gt;&lt;strong&gt;Team Viewer&lt;/strong&gt;&lt;/em&gt; 其实是一个很好用的远程软件，但是不知道为什么从6月开始突然大手笔的封杀了免费版，让我这个日常白嫖党，不禁有些措手不及。在尝试其他多款软件后，始终感觉效果不怎么样，于是，有了这次的实践。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h1 id=\&#34;frp的作用\&#34;&gt;&lt;strong&gt;Frp的作用&lt;/strong&gt;&lt;/h1&gt;\n&lt;ul&gt;\n&lt;li&gt;利用处于内网或防火墙后的机器，对外网环境提供 &lt;strong&gt;HTTP&lt;/strong&gt; 或 &lt;strong&gt;HTTPS&lt;/strong&gt; 服务。&lt;/li&gt;\n&lt;li&gt;对于 &lt;strong&gt;HTTP&lt;/strong&gt;, &lt;strong&gt;HTTPS&lt;/strong&gt; 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个 80 端口。&lt;/li&gt;\n&lt;li&gt;利用处于内网或防火墙后的机器，对外网环境提供 TCP 和 UDP 服务，例如在家里通过 RDP/SSH 访问处于公司内网环境内的主机。&lt;br&gt;\n&lt;/n&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h1 id=\&#34;搭建过程\&#34;&gt;&lt;strong&gt;搭建过程&lt;/strong&gt;&lt;/h1&gt;\n&lt;blockquote&gt;\n&lt;p&gt;😝😝终于开始了，上面讲了好多我自己都看不懂的废话。不过，例行介绍还是有必要的。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;p&gt;首先，介绍一下我安装 Frp 的 VPS 及配置，服务器是 GCP 的香港节点，n1 配置，1vCPU 和 0.5G 内存。经过多次尝试，IP 段为 &lt;em&gt;&lt;strong&gt;34.96.x.x&lt;/strong&gt;&lt;/em&gt; ，在我这个小城市的联通延迟还是不错的，ping 大概维持在 70s-90s 上下。系统我选择的是 Ubuntu 18.04 版本。&lt;/p&gt;\n&lt;h2 id=\&#34;服务器端\&#34;&gt;&lt;strong&gt;服务器端&lt;/strong&gt;&lt;/h2&gt;\n&lt;h3 id=\&#34;1下载程序\&#34;&gt;&lt;strong&gt;1.下载程序&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;前往 Frp 的 &lt;strong&gt;Github releases&lt;/strong&gt; 页面下载最新版的、对应你的 VPS 的处理器架构的包，地址：&lt;a href=\&#34;https://github.com/fatedier/Frp/releases\&#34;&gt;&lt;strong&gt;Frp内网穿透&lt;/strong&gt;&lt;/a&gt; 。&lt;/p&gt;\n&lt;p&gt;其实目前大多数 VPS 主机商都是使用的 &lt;strong&gt;arm64&lt;/strong&gt; 架构，所以下载时直接选择对应此架构的版本就可以。当然，如果不放心，也可以运行以下命令，查看一下你的 VPS 处理器架构：&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  arch\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;如果输出 &lt;strong&gt;x86_64&lt;/strong&gt; 那么就说明是 &lt;strong&gt;arm64&lt;/strong&gt;，即需要下载带 &lt;strong&gt;linux_amd64&lt;/strong&gt; 的那个压缩包；如果输出的是其他的，则在文件列表中寻找 &lt;strong&gt;linux&lt;/strong&gt; 的对应架构的压缩包。记住，右键复制链接。&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;本文便以 &lt;em&gt;&lt;strong&gt;arm64&lt;/strong&gt;&lt;/em&gt; 架构举例，截止我写文时， &lt;em&gt;&lt;strong&gt;Frp&lt;/strong&gt;&lt;/em&gt; 最新版是 &lt;em&gt;&lt;strong&gt;v0.33.0&lt;/strong&gt;&lt;/em&gt; 。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;pre&gt;&lt;code&gt;1  ## 切换到你想要 Frp 存放的目录，此处我选择的是 /home \n2  ## 不要问我为什么，我不懂 Linux 目录结构 ，不知道这个目录的含义\n3  ## 选择它纯粹是因为我搭建的时候看的教程是选择这个目录，你也可以选择其他的目录。\n4  cd /home\n5  ## 从 VPS 中下载 Frp 包\n6  wget --no-check-certificate https://github.com/fatedier/Frp/releases/download/v0.33.0/frp_0.33.0_linux_arm64.tar.gz\n7  ## 解包\n8  tar -xzf frp_0.33.0_linux_arm64.tar.gz\n9  ## 将文件夹名改成 Frp，不然目录太长了，一是记不住，二是也不方便操作\n10  mv frp_0.33.0_linux_arm64 frp\n11  ## 切换到 Frp 目录\n12  cd /frp\n13  ## 执行 chemod 命令，确保 Frps 程序具有可执行权限\n14  chmod +x Frps\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;此处可以尝试运行一下，看看是否能正常运行：&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  ./frps -help\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;正常情况下，大概会出现一页的帮助文档信息，这里我就不截图或者 &lt;strong&gt;print&lt;/strong&gt; 下来了，没多大必要，&lt;s&gt;当然不是我懒&lt;/s&gt; 。倘若你没有出现帮助信息，那或许是你下载的版本不对。如果你真的按照我上面的的步骤一步一步下来的话，应该是没问题的，哼🤔！&lt;/p&gt;\n&lt;h4 id=\&#34;配置文件\&#34;&gt;配置文件&lt;/h4&gt;\n&lt;table&gt;\n&lt;thead&gt;\n&lt;tr&gt;\n&lt;th style=\&#34;text-align:left\&#34;&gt;文档名称&lt;/th&gt;\n&lt;th style=\&#34;text-align:left\&#34;&gt;功能&lt;/th&gt;\n&lt;/tr&gt;\n&lt;/thead&gt;\n&lt;tbody&gt;\n&lt;tr&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;frpc&lt;/td&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;客户端程序&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;frpc.ini&lt;/td&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;客户端配置文件&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;frps&lt;/td&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;服务端程序&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;frps.ini&lt;/td&gt;\n&lt;td style=\&#34;text-align:left\&#34;&gt;服务端配置文件&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/tbody&gt;\n&lt;/table&gt;\n&lt;p&gt;理论上整个包中，只有这些文件是有用的。其他的 LICENSE 、frps_full.ini[完整版配置文件] 的基本用不到。&lt;/p&gt;\n&lt;h3 id=\&#34;2配置程序\&#34;&gt;&lt;strong&gt;2.配置程序&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;你可以参考以下配置说明来书写配置文件 &lt;strong&gt;frps.ini&lt;/strong&gt;，我觉得可以先在电脑上打一份草稿，先列举自己的需求。&lt;br&gt;\n我这里列举了一些必要的、我用到的和你可能用到的配置，如果你想研究完整的配置说明可以看目录下的 &lt;strong&gt;frps_full.ini&lt;/strong&gt; ，以及参考 &lt;a href=\&#34;https://github.com/fatedier/frp/blob/master/README_zh.md\&#34;&gt;Frp中文说明&lt;/a&gt; 。&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  ## 这是是表头，代表配置从这里开始\n2  [common]\n3  ## frp 服务端端口（必须），默认是7000，可以自定义\n4  bind_port = 7000\n5  ## frp 服务端密钥（必须），是服务端与客户端认证的密码\n6  token = 123456789\n7  ## web 仪表盘端口，只有设置了才能使用仪表盘，一般默认就行\n8  dashboard_port = 7500\n9  ## 访问仪表盘的用户名密码，如果不设置，则默认都是 admin\n10  dashboard_user = admin\n11  dashboard_pwd = admin\n12  ## 其实像我仅仅使用 TCP 穿透内网使用远程桌面的话，配置到此结束就可以了\n13  ## 如果你想要用 frp 穿透访问内网中的网站（例如路由器设置页面）\n14  ## 则必须要设置以下两个监听端口，不设置则不会开启这项功能\n15  vhost_http_port = 8080\n16  vhost_https_port = 443\n17  ## 假设此项设置为 example.com，客户端配置 http 时将 subdomain 设置为 frp\n18  ## 设定域名，将 frp.example.com 在你的域名解析商那里解析到你的主机 IP 地址\n19  ## 之后就可以使用此域名来访问你的客户端对应的 HTTP\n20  subdomain_host = example.com\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;检查没有什么想要增删的后，将配置文件写入 &lt;strong&gt;frps.ini&lt;/strong&gt; 就可以了。这里介绍两种方法，&lt;br&gt;\n（1）你可以使用 &lt;strong&gt;Vim&lt;/strong&gt; 编辑器：&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;apt-get vim install\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;一路 &lt;strong&gt;Y&lt;/strong&gt; 确认，成功后，&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;vim /home/frp/frps.ini\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;进入编辑配置文件，按下 &lt;strong&gt;&lt;code&gt;insert&lt;/code&gt;&lt;/strong&gt; 键，进入编辑模式，将你的配置文件复制进去，检查无误后，按下 &lt;strong&gt;&lt;code&gt;Esc&lt;/code&gt;&lt;/strong&gt; 退出编辑模式，直接输入 &lt;strong&gt;:wq!&lt;/strong&gt; 保存并退出。&lt;/p&gt;\n&lt;p&gt;&lt;img src=\&#34;https://cdn.sspai.com/2020/06/06/bf71a000e0dd5134db1cb30a422c5f42.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1\&#34; width=\&#34;960\&#34;&gt;&lt;/n&gt;&lt;/p&gt;\n&lt;blockquote&gt;\n&lt;p&gt;这里搬运一张参考教程里的图片。&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;p&gt;（2）使用 &lt;strong&gt;echo&lt;/strong&gt; 命令，直接将 配置文件写入 &lt;strong&gt;frps.ini&lt;/strong&gt; 文档中：&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  echo &amp;quot;[common]\n2  bind_port = 7000\n3  token = 123456789\n4  dashboard_port = 7500\n5  dashboard_user = admin\n6  dashboard_pwd = admin\n7  vhost_http_port = 8080\n8  vhost_https_port = 443\n9  subdomain_host = example.com&amp;quot; &amp;gt; frps.ini\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;到此基本结束了，尝试启动一下 &lt;strong&gt;frps&lt;/strong&gt;&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  ## 使用 -c 参数指定配置文件\n2  ./frps -c frps.ini\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;仔细查看运行后的命令，出现绿色 &lt;strong&gt;success&lt;/strong&gt; 字样，代表配置没有问题，可以正常使用了。此时，可以按下 &lt;strong&gt;&lt;code&gt;Ctrl&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;c&lt;/code&gt;&lt;/strong&gt; 终止程序，进行接下来的配置。&lt;/p&gt;\n&lt;h3 id=\&#34;3后台运行和开机自启\&#34;&gt;&lt;strong&gt;3.后台运行和开机自启&lt;/strong&gt;&lt;/h3&gt;\n&lt;h4 id=\&#34;启动\&#34;&gt;启动&lt;/h4&gt;\n&lt;p&gt;直接使用上面的命令运行是不行的，当断开 &lt;strong&gt;SSH&lt;/strong&gt; 的时候，程序 &lt;strong&gt;frps&lt;/strong&gt; 就会停止运行，因此可以使用 &lt;strong&gt;nohup&lt;/strong&gt; 来使它在后台运行。&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  nohup /home/frp/frps -c /home/frp/frps.ini &amp;amp;\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h4 id=\&#34;停止\&#34;&gt;停止&lt;/h4&gt;\n&lt;p&gt;停止就使用 &lt;strong&gt;pkill&lt;/strong&gt; ，结束 &lt;strong&gt;frps&lt;/strong&gt; 即可。&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  pkill frps\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h4 id=\&#34;重启\&#34;&gt;重启&lt;/h4&gt;\n&lt;p&gt;先停止，再启动。&lt;/p&gt;\n&lt;h4 id=\&#34;开机自启\&#34;&gt;开机自启&lt;/h4&gt;\n&lt;p&gt;对比了网上多种开机自启的方式，我最终选择了 &lt;strong&gt;systemctl&lt;/strong&gt; 来控制，因为很好用，而且还方便，当然，原理我并不清楚，能用就行。&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  ## 使用管理员权限编辑系统服务文件\n2  sudo vim /lib/systemd/system/frps.service\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;在打开的 &lt;strong&gt;frps.service&lt;/strong&gt; 中写入以下内容，&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  [Unit]\n2  Description=fraps service\n3  After=network.target syslog.target\n4  Wants=network.target\n\n5  [Service]\n6  Type=simple\n7  #启动服务的命令（此处写我们刚才存放 frps 的目录，或者你自定义存放的目录）\n8  ExecStart=/home/frp/frps -c /home/frp/frps.ini\n\n9  [Install]\n10  WantedBy=multi-user.target\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;依照上面的方式保存。&lt;/p&gt;\n&lt;p&gt;那么，接下来就启动吧！&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;sudo systemctl start frps\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;再打开自启动。&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;sudo systemctl enable frps\n&lt;/code&gt;&lt;/pre&gt;\n&lt;blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;重启应用，&lt;em&gt;&lt;strong&gt;sudo systemctl restart frps&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;\n&lt;li&gt;停止应用，&lt;em&gt;&lt;strong&gt;sudo systemctl stop frps&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;\n&lt;li&gt;查看应用日志，&lt;em&gt;&lt;strong&gt;sudo systemctl status frps&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/blockquote&gt;\n&lt;h3 id=\&#34;题外话\&#34;&gt;题外话&lt;/h3&gt;\n&lt;p&gt;使用 GCP 、阿里云、腾讯云等还需在安全组-入站规则内放开对应的端口，不然会出现客户端无法连接到服务端的情况。具体放开的方法见此：&lt;a href=\&#34;https://tools.miku.ac/o/search_help?q=YmFpZHUg5LqR5pyN5Yqh5Zmo5a6J5YWo57uE6K6-572u\&#34;&gt;&lt;strong&gt;云服务器安全组设置&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;\n&lt;h2 id=\&#34;客户端配置\&#34;&gt;&lt;strong&gt;客户端配置&lt;/strong&gt;&lt;/h2&gt;\n&lt;h3 id=\&#34;1书写配置\&#34;&gt;&lt;strong&gt;1.书写配置&lt;/strong&gt;&lt;/h3&gt;\n&lt;h4 id=\&#34;基本配置这是整个配置文件的必须\&#34;&gt;基本配置，这是整个配置文件的必须&lt;/h4&gt;\n&lt;pre&gt;&lt;code&gt;1  ## 这个配置的开头，不用管它什么意思，反正必须有\n2  [common]\n3  ## frp 服务端的地址，可以是 IP 也可以是之前解析的域名\n4  server_addr = frp.example.com\n5  ## 服务端设定的端口，即上面服务端配置中的  bind_port\n6  server_port = 7000\n7  ## 服务端设定的密钥，即上面服务端配置中的  token\n8  token = 123456789\n&lt;/code&gt;&lt;/pre&gt;\n&lt;h4 id=\&#34;tcpudp\&#34;&gt;TCP/UDP&lt;/h4&gt;\n&lt;p&gt;这里以远程桌面连接为例，&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  ## 自定义的配置名称，格式为 “[名称]” ，放在开头\n2  [RDP]\n3  ## 连接类型，填写 tcp 或 udp ,远程连接一般使用 tcp\n4  type = tcp\n5  ## 本地ip，填你需要转发到的目的ip\n6  ## 如果是转发到frp客户端所在本机（比如远程主机）则填 127.0.0.1\n7  ##否则填对应机器的内网ip\n8  local_ip = 127.0.0.1\n9  ## 需要转发的端口，比如远程连接的端口是 3389\n10  local_port = 3389\n11  ## frp 服务端的远程监听端口，即你访问服务端的 remote_port 就相当于访问\n12  ## 客户端的 local_port ，如果填0则会随机分配一个端口\n13  remote_port = 3390\n14  ## 是否加密客户端与服务端之间的通信，默认是 false\n15  use_encryption = false\n16  ## 是否压缩客户端与服务端之间的通信，默认是 false\n17  use_compression = false\n18  ## 压缩可以节省流量，但需要消耗 CPU 资源\n19  ## 加密自然也会消耗 CPU 资源，但是不大\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;鉴于我只是为了远程桌面连接而配置的 &lt;strong&gt;frp&lt;/strong&gt; ，其他的我没有深入去了解，想了解的可以去&lt;a href=\&#34;#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99\&#34;&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/a&gt;中自己学习。&lt;/p&gt;\n&lt;h3 id=\&#34;2合并配置\&#34;&gt;&lt;strong&gt;2.合并配置&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;上面已经将基本我们需要的配置都写出来了，将二者合而为一，然后填写到 &lt;strong&gt;frpc.ini&lt;/strong&gt; 配置文件中。看起来就是这样子的：&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;1  [common]\n2  server_addr = frp.example.com\n3  server_port = 7000\n4  token = 123456789\n5  [RDP]\n6  type = tcp\n7  local_ip = 127.0.0.1\n8  local_port = 3389\n9  remote_port = 3390\n10  use_encryption = false\n11  use_compression = false\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;将下载的对应你的远程主机版本的 &lt;strong&gt;frpc&lt;/strong&gt; 客户端文件，解压在一个方便的位置，例如我的存放位置在&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;c:/frp\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;在当前文件夹，按住 &lt;strong&gt;&lt;code&gt;shfit&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;鼠标右键&lt;/code&gt;&lt;/strong&gt; ，在出现的右键菜单中选择 &lt;strong&gt;&lt;code&gt;从此处打开 PowerShell 窗口&lt;/code&gt;&lt;/strong&gt; ，也有可能是 &lt;strong&gt;&lt;code&gt;从此处打开 CMD 窗口&lt;/code&gt;&lt;/strong&gt; ,如果出现的是如下结果，则说明frp客户端启动成功。&lt;/p&gt;\n&lt;pre&gt;&lt;code&gt;PS C:\\frp&amp;gt; ./frpc -c frpc.ini\n2020/06/16 16:25:19 [I] [service.go:282] [34gd169d91sffsa6] login to server success, get run id [34gd169d91sffsa6], server udp port [0]\n2020/06/16 16:25:19 [I] [proxy_manager.go:144] [34gd169d91sffsa6] proxy added: [RDP]\n2020/06/16 16:25:19 [I] [control.go:179] [34gd169d91sffsa6] [RDP] start proxy success\n&lt;/code&gt;&lt;/pre&gt;\n&lt;p&gt;记住末尾的 &lt;strong&gt;start proxy success&lt;/strong&gt; 出现这个字样，代表已经启动成功，如果不是这个，就要检查是否配置文件错误，是否与远程服务器连接不通畅。&lt;/p&gt;\n&lt;h3 id=\&#34;3开机自启\&#34;&gt;&lt;strong&gt;3.开机自启&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;关于 Windows 客户端如何开机自启，网上也有很多方式，什么脚本啊、注册服务啊，多不胜数，这里我介绍一种使用非常简单的方式，纯粹的可视化图形交互界面，简单几步就能将程序注册为系统服务。&lt;/p&gt;\n&lt;h4 id=\&#34;1下载软件\&#34;&gt;（1）下载软件&lt;/h4&gt;\n&lt;p&gt;下载地址：&lt;a href=\&#34;https://cloud.189.cn/t/ieiUFv7fEJB3\&#34;&gt;&lt;strong&gt;SrvanyUI&lt;/strong&gt;&lt;/a&gt;  访问码：&lt;strong&gt;wl5f&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Srvany是微软套件的一个小工具,可以手动将程序或其他可执行文件注册为系统服务。但是操作涉及到注册表操作，使用颇为不便。而SrvanyUI是一位大神，封装简化的可视化工具，将原本繁琐的操作，点击几下键盘就能完成。&lt;/p&gt;\n&lt;p&gt;下载完成后，将程序放在一个比较顺手的文件夹，&lt;/p&gt;\n&lt;h4 id=\&#34;2-创建服务\&#34;&gt;(2) 创建服务&lt;/h4&gt;\n&lt;p&gt;打开 &lt;strong&gt;SrvanyUI&lt;/strong&gt; ，截图如下：&lt;/p&gt;\n&lt;img src=\&#34;https://storage.live.com/items/6364F9CA9E81CC88!3455?authkey=AKokgDrs6tJvuHM\&#34; width=\&#34;400\&#34;&gt;\n&lt;p&gt;选择左上角工具栏第一个绿色的 &lt;strong&gt;+&lt;/strong&gt; 号，开始添加服务，如下图所示，依次选择自建服务，填写完整 &lt;strong&gt;名称&lt;/strong&gt; ，&lt;strong&gt;选项&lt;/strong&gt; 等内容，然后点击确定，开始使用吧！&lt;/p&gt;\n&lt;img src=\&#34;https://storage.live.com/items/6364F9CA9E81CC88!3453?authkey=AKokgDrs6tJvuHM\&#34; width=\&#34;400\&#34;&gt;\n&lt;p&gt;大功告成！此时，按下 &lt;strong&gt;&lt;code&gt;win&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;x&lt;/code&gt;&lt;/strong&gt; ，点击 &lt;strong&gt;计算机管理&lt;/strong&gt; ，打开 &lt;strong&gt;服务和程序&lt;/strong&gt; -&amp;gt; &lt;strong&gt;服务&lt;/strong&gt; ，看看 FRP 服务是否已经存在并启动了呢！&lt;/p&gt;\n&lt;img src=\&#34;https://storage.live.com/items/6364F9CA9E81CC88!3454?authkey=AKokgDrs6tJvuHM\&#34; width=\&#34;528\&#34;&gt;\n&lt;h1 id=\&#34;结尾\&#34;&gt;&lt;strong&gt;结尾&lt;/strong&gt;&lt;/h1&gt;\n&lt;p&gt;至此，所有步骤都已完成。&lt;br&gt;\n在其他电脑使用 &lt;strong&gt;&lt;code&gt;win&lt;/code&gt;&lt;/strong&gt; + &lt;strong&gt;&lt;code&gt;r&lt;/code&gt;&lt;/strong&gt; 弹出运行窗口，输入 &lt;strong&gt;mstsc&lt;/strong&gt; 并确定，打开远程桌面连接，输入你设定的 &lt;strong&gt;域名&lt;/strong&gt; : &lt;strong&gt;端口&lt;/strong&gt;，如 &lt;strong&gt;frp.xxx.com:7001&lt;/strong&gt; ，账户和密码就是你设置的这台被远程客户端的登录账户和密码，连接远程桌面看看吧。&lt;/p&gt;\n&lt;h1 id=\&#34;参考资料\&#34;&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/h1&gt;\n&lt;blockquote&gt;\n&lt;ul&gt;\n&lt;li&gt;官方配置使用说明：&lt;a href=\&#34;https://github.com/fatedier/frp/blob/master/README_zh.md\&#34;&gt;https://github.com/fatedier/frp/blob/master/README_zh.md&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;frp官方中文文档：&lt;a href=\&#34;https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html\&#34;&gt;https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;Frp内网穿透工具的搭建和使用方法：&lt;a href=\&#34;https://code.skyheng.com/post/52586.html\&#34;&gt;https://code.skyheng.com/post/52586.html&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;使用 FRP 反向代理实现 Windows 远程连接：&lt;a href=\&#34;https://www.cnblogs.com/zhanggaoxing/p/9221705.html\&#34;&gt;https://www.cnblogs.com/zhanggaoxing/p/9221705.html&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;用开源免费的内网穿透工具 frp，实现远程桌面和文件传输 - 少数派：&lt;a href=\&#34;https://sspai.com/post/60852\&#34;&gt;https://sspai.com/post/60852&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;FRP内网穿透Windows远程桌面：&lt;a href=\&#34;https://www.cnblogs.com/ingxx/p/12255241.html\&#34;&gt;https://www.cnblogs.com/ingxx/p/12255241.html&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;SrvanyUI服务管理工具发布：&lt;a href=\&#34;https://wangye.org/blog/archives/644/\&#34;&gt;https://wangye.org/blog/archives/644/&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/blockquote&gt;\n&#34;,&#34;fileName&#34;:&#34;2020_06_16_frp&#34;,&#34;abstract&#34;:&#34;&lt;p&gt;自从建了这个主页，一直没想好写什么东西，正巧碰上远程连接软件 &lt;strong&gt;Team Viewer&lt;/strong&gt; 无法使用的情况， 在对比了多个远程连接软件后，选择了 &lt;strong&gt;Frp&lt;/strong&gt; 作为解决我目前困境的一个方式的同时，也想记录下本次搭建的过程。&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;记录一次动手实践 之 搭建FRP穿透服务，实现远程桌面&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;原创&#34;,&#34;slug&#34;:&#34;vnP8hFcC5&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://www.imbsystems.com/tag/vnP8hFcC5/&#34;},{&#34;name&#34;:&#34;frp&#34;,&#34;slug&#34;:&#34;kvUr_l73Wr&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://www.imbsystems.com/tag/kvUr_l73Wr/&#34;},{&#34;name&#34;:&#34;动手实践&#34;,&#34;slug&#34;:&#34;d1JidPqVkN&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://www.imbsystems.com/tag/d1JidPqVkN/&#34;}],&#34;date&#34;:&#34;2020-06-16 20:00:00&#34;,&#34;dateFormat&#34;:&#34;2020-06-16&#34;,&#34;feature&#34;:&#34;https://storage.live.com/items/6364F9CA9E81CC88!3452?authkey=AKokgDrs6tJvuHM&#34;,&#34;link&#34;:&#34;https://www.imbsystems.com/post/2020_06_16_frp/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;14 min read&#34;,&#34;time&#34;:806000,&#34;words&#34;:3479,&#34;minutes&#34;:14},&#34;description&#34;:&#34;自从建了这个主页，一直没想好写什么东西，正巧碰上远程连接软件 Team Viewer 无法使用的情况， 在对比了多个远程连接软件后，选择了 Frp 作为解决我目前困境的一个方式的同时，也想记录下本次搭建的过程。\n\nFrp 全名：Fast R...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;&lt;a href=\&#34;#frp%E7%9A%84%E4%BD%9C%E7%94%A8\&#34;&gt;&lt;strong&gt;Frp的作用&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B\&#34;&gt;&lt;strong&gt;搭建过程&lt;/strong&gt;&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF\&#34;&gt;&lt;strong&gt;服务器端&lt;/strong&gt;&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#1%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F\&#34;&gt;&lt;strong&gt;1.下载程序&lt;/strong&gt;&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6\&#34;&gt;配置文件&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#2%E9%85%8D%E7%BD%AE%E7%A8%8B%E5%BA%8F\&#34;&gt;&lt;strong&gt;2.配置程序&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#3%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E5%92%8C%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF\&#34;&gt;&lt;strong&gt;3.后台运行和开机自启&lt;/strong&gt;&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%90%AF%E5%8A%A8\&#34;&gt;启动&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%81%9C%E6%AD%A2\&#34;&gt;停止&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%87%8D%E5%90%AF\&#34;&gt;重启&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF\&#34;&gt;开机自启&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E9%A2%98%E5%A4%96%E8%AF%9D\&#34;&gt;题外话&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE\&#34;&gt;&lt;strong&gt;客户端配置&lt;/strong&gt;&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#1%E4%B9%A6%E5%86%99%E9%85%8D%E7%BD%AE\&#34;&gt;&lt;strong&gt;1.书写配置&lt;/strong&gt;&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E8%BF%99%E6%98%AF%E6%95%B4%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%BF%85%E9%A1%BB\&#34;&gt;基本配置，这是整个配置文件的必须&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#tcpudp\&#34;&gt;TCP/UDP&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#2%E5%90%88%E5%B9%B6%E9%85%8D%E7%BD%AE\&#34;&gt;&lt;strong&gt;2.合并配置&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#3%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF\&#34;&gt;&lt;strong&gt;3.开机自启&lt;/strong&gt;&lt;/a&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#1%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6\&#34;&gt;（1）下载软件&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#2-%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1\&#34;&gt;(2) 创建服务&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%BB%93%E5%B0%BE\&#34;&gt;&lt;strong&gt;结尾&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99\&#34;&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;blockquote&gt;\n&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！❤️&lt;/p&gt;\n&lt;/blockquote&gt;\n&lt;h2 id=\&#34;关于本站\&#34;&gt;🏠关于本站&lt;/h2&gt;\n&lt;p&gt;🤣本博纯粹就是我无聊想不开。&lt;/p&gt;\n&lt;p&gt;现在做一个博客不难，难的在于如何坚持下去，如何写出文章。&lt;/p&gt;\n&lt;p&gt;之前使用 &lt;strong&gt;Wordpress&lt;/strong&gt; 做过一个，但是由于我太懒🤣🤣，服务器的费用也舍不得，所以后来关闭了。&lt;br&gt;\n直到今天无意间发现  &lt;strong&gt;Github Page&lt;/strong&gt; ，于是又一番 &lt;strong&gt;G̶o̶o̶g̶l̶e̶&lt;/strong&gt; 、 &lt;strong&gt;B̶a̶i̶d̶u̶&lt;/strong&gt; 😆后建了这个。&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;about&#34;,&#34;abstract&#34;:&#34;&#34;,&#34;title&#34;:&#34;关于&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-05-24 18:00:00&#34;,&#34;dateFormat&#34;:&#34;2020-05-24&#34;,&#34;feature&#34;:&#34;&#34;,&#34;link&#34;:&#34;https://www.imbsystems.com/post/about/&#34;,&#34;hideInList&#34;:true,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;1 min read&#34;,&#34;time&#34;:26000,&#34;words&#34;:121,&#34;minutes&#34;:1},&#34;description&#34;:&#34;\n欢迎来到我的小站呀，很高兴遇见你！❤️\n\n🏠关于本站\n🤣本博纯粹就是我无聊想不开。\n现在做一个博客不难，难的在于如何坚持下去，如何写出文章。\n之前使用 Wordpress 做过一个，但是由于我太懒🤣🤣，服务器的费用也舍不得，所以后...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99\&#34;&gt;🏠关于本站&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;},{&#34;content&#34;:&#34;&lt;p&gt;👏思考了好久，才又写下这些。&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;p&gt;✍️我本身其实不是一个喜欢静下心写东西的人。从小学开始，每次作文不是不写，就是随便写两句就词穷了。后来中学，布置的日记，也都是敷衍而又潦草的写几笔。至于为何开了博客，大概就是因为新奇吧。&lt;/p&gt;\n&lt;p&gt;最早是在 2018 年，刚刚接触到 &lt;strong&gt;WordPress&lt;/strong&gt;，于是尝试着搭建了一个，但是一个是懒，一个是主机的价格舍不得，于是没写几篇文章就被我关闭了，实在是汗颜。&lt;/p&gt;\n&lt;p&gt;中间断断续续的也重开过几次，每次都是匆匆而开，匆匆而闭。主要还是归咎于，我懒吧！🤣&lt;/p&gt;\n&lt;p&gt;这次，情况比较特殊。本博客是基于 &lt;strong&gt;Github Page&lt;/strong&gt; 搭建的。所以，目前不会因为我舍不得 &lt;em&gt;Money&lt;/em&gt; 而中途暴毙？！&lt;/p&gt;\n&lt;p&gt;其实之前有在微信开过公众号，毕竟它和博客还是蛮像的（小声BB：我是这么认为的。），不过后来觉得它没有个人网站有 &lt;strong&gt;B&lt;/strong&gt; 格啊！毕竟一个只能从微信里找到相应公众号去看，另一个是需要从浏览器里输入个人域名才能访问。&lt;/p&gt;\n&lt;p&gt;没错，我就是这么一个爱慕虚荣的人。😂&lt;/p&gt;\n&lt;p&gt;其实，写写东西应该还是有好处的吧。能静下心来，梳理一下自己的思绪；能分享一些技巧，给需要的朋友看。&lt;/p&gt;\n&lt;p&gt;不过，碍于我的文笔，可能我也不会写出什么有价值的来。所以，大概也就是自己玩玩而已。&lt;/p&gt;\n&lt;p&gt;其实能写这么多，已经让我头疼。已经体会到那些网文作者哭喊卡文的痛楚，而且，我这还是一篇简简单单的前言。所以，就暂时到这儿吧。&lt;/p&gt;\n&lt;p&gt;那么，诸君，努力吧！&lt;/p&gt;\n&lt;p&gt;谨以此歌，献给自己，献给你们。&lt;/p&gt;\n&lt;iframe frameborder=\&#34;no\&#34; border=\&#34;0\&#34; marginwidth=\&#34;0\&#34; marginheight=\&#34;0\&#34; width=340 height=86 src=\&#34;//music.163.com/outchain/player?type=2&amp;id=411214279&amp;auto=1&amp;height=66\&#34;&gt;&lt;/iframe&gt;&#34;,&#34;fileName&#34;:&#34;hello-wrold&#34;,&#34;abstract&#34;:&#34;&lt;p&gt;👏思考了好久，才又写下这些。&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;Hello Wrold!&#34;,&#34;tags&#34;:[],&#34;date&#34;:&#34;2020-05-24 18:00:00&#34;,&#34;dateFormat&#34;:&#34;2020-05-24&#34;,&#34;feature&#34;:&#34;https://storage.live.com/items/6364F9CA9E81CC88!5397?authkey=AKokgDrs6tJvuHM&#34;,&#34;link&#34;:&#34;https://www.imbsystems.com/post/hello-wrold/&#34;,&#34;hideInList&#34;:false,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;2 min read&#34;,&#34;time&#34;:97000,&#34;words&#34;:482,&#34;minutes&#34;:2},&#34;description&#34;:&#34;👏思考了好久，才又写下这些。\n\n✍️我本身其实不是一个喜欢静下心写东西的人。从小学开始，每次作文不是不写，就是随便写两句就词穷了。后来中学，布置的日记，也都是敷衍而又潦草的写几笔。至于为何开了博客，大概就是因为新奇吧。\n最早是在 2018...&#34;,&#34;toc&#34;:&#34;&#34;},{&#34;content&#34;:&#34;&lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;\n✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;\n&lt;!-- more --&gt;\n&lt;p&gt;&lt;a href=\&#34;https://github.com/getgridea/gridea\&#34;&gt;Github&lt;/a&gt;&lt;br&gt;\n&lt;a href=\&#34;https://gridea.dev/\&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;\n&lt;a href=\&#34;http://fehey.com/\&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;\n&lt;h2 id=\&#34;特性\&#34;&gt;特性👇&lt;/h2&gt;\n&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;\n&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;\n&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;\n&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;\n&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;\n&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;\n&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=\&#34;https://github.com/gitalk/gitalk\&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=\&#34;https://github.com/SukkaW/DisqusJS\&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;\n&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;\n&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;\n&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;\n&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;\n&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;\n&lt;p&gt;😘 Enjoy~&lt;/p&gt;\n&#34;,&#34;fileName&#34;:&#34;hello-gridea&#34;,&#34;abstract&#34;:&#34;&lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;\n✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;\n&#34;,&#34;title&#34;:&#34;Hello Gridea！&#34;,&#34;tags&#34;:[{&#34;name&#34;:&#34;Gridea&#34;,&#34;slug&#34;:&#34;7GsmfV9DR&#34;,&#34;used&#34;:true,&#34;link&#34;:&#34;https://www.imbsystems.com/tag/7GsmfV9DR/&#34;}],&#34;date&#34;:&#34;2018-12-12 00:00:00&#34;,&#34;dateFormat&#34;:&#34;2018-12-12&#34;,&#34;feature&#34;:&#34;https://www.imbsystems.com/post-images/hello-gridea.png&#34;,&#34;link&#34;:&#34;https://www.imbsystems.com/post/hello-gridea/&#34;,&#34;hideInList&#34;:true,&#34;isTop&#34;:false,&#34;stats&#34;:{&#34;text&#34;:&#34;2 min read&#34;,&#34;time&#34;:62000,&#34;words&#34;:298,&#34;minutes&#34;:2},&#34;description&#34;:&#34;👏  欢迎使用 Gridea ！\n✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...\n\nGithub\nGridea 主页\n示例网站\n特性👇\n📝  你可以使用最酷的 Markdo...&#34;,&#34;toc&#34;:&#34;&lt;ul class=\&#34;markdownIt-TOC\&#34;&gt;\n&lt;li&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=\&#34;#%E7%89%B9%E6%80%A7\&#34;&gt;特性👇&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&#34;}]";
-  // var json = escape.substr(1, escape.length - 2);
-  // var datas = json.split(',');
-  // for (let i=0; i < datas.length; i++) {
-  //   let item = datas[i];
-  //   let attrs = item.split('34;:&#34')
-  //   debugger
-  //   console.log(datas[i])
-  // }
-  let escapeMap = new Map();
-  escapeMap.set('&#34;', '"');
-  escapeMap.set('&gt;', '>');
-  escapeMap.set('&#39;', "'");
-  escapeMap.set('&lt;', '<');
-  escapeMap.set('&quot;', '"');
-  escapeMap.set('&amp;', '&');
-</script> -->
-
-<script src="/media/js/mouse/peace.js"></script>
-
-
+              </div>
+                    <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      </ul>
+                    </nav>
+                    <div class="copyright">
+                      <p>Powered by <a href="https://www.imbsystems.com" target="_blank">Imbsystems</a> <br/> Theme <a href="https://github.com/shanbufun/gridea-theme-song" target="_blank"  title="宋"  >Song</a> by <a href="https://shanbu.fun/" target="_blank"  title="山卜方" >shanbufun</a> </p>
+                  </div>
+                  
+              </footer>
+    </body>
 </html>
