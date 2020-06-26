@@ -2275,11 +2275,11 @@ pre code {
   font-size: 13px;
 }
 .theme-dark pre {
-  background: #83cbac;
+  background: #292a2d;
 }
 .theme-dark code {
   border: 1px solid #3d3c41;
-  background-color: #83cbac;
+  background-color: #292a2d;
 }
 figure {
   margin: 0;
