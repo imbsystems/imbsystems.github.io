@@ -60,12 +60,12 @@
                                     <div class="mdui-typo-body-2 mdui-m-b-2" datetime="2020-06-16 20:00:00">2020-06-16 / 14 min read</div>
                                     <div class="mdui-m-b-2 mdui-typo post-neirong"><p>自从建了这个主页，一直没想好写什么东西，正巧碰上远程连接软件 <strong>Team Viewer</strong> 无法使用的情况， 在对比了多个远程连接软件后，选择了 <strong>Frp</strong> 作为解决我目前困境的一个方式的同时，也想记录下本次搭建的过程。</p>
 <!-- more -->
-<p>Frp 全名：Fast Reverse Proxy，是一个可用于内网穿透的高性能的反向代理应用，支持 TCP, UDP, HTTP, HTTPS 协议。可以利用Frp内网穿透服务实现穿透处于内网或防火墙后的设备及主机；对外网环境提供 HTTP 或 HTTPS 服务；利用处于内网或防火墙后的机器，对外网环境提供 TCP/UDP 服务等。</p>
-<p>比如我这次的搭建Frp服务的主要目的就是通过  <strong>Frp</strong> + <strong>RDP</strong> 访问处于公司内网环境内的主机，达到远程办公的目的。</p>
+<p>Frp 全名：Fast Reverse Proxy，是一个可用于内网穿透的高性能的反向代理应用，支持 TCP, UDP, HTTP, HTTPS 协议。可以利用 Frp 内网穿透服务实现穿透处于内网或防火墙后的设备及主机；对外网环境提供 HTTP 或 HTTPS 服务；利用处于内网或防火墙后的机器，对外网环境提供 TCP/UDP 服务等。</p>
+<p>比如我这次的搭建 Frp 服务的主要目的就是通过 <strong>Frp</strong> + <strong>RDP</strong> 访问处于公司内网环境内的主机，达到远程办公的目的。</p>
 <blockquote>
-<p>这里不得不提一句，<em><strong>Team Viewer</strong></em> 其实是一个很好用的远程软件，但是不知道为什么从6月开始突然大手笔的封杀了免费版，让我这个日常白嫖党，不禁有些措手不及。在尝试其他多款软件后，始终感觉效果不怎么样，于是，有了这次的实践。</p>
+<p>这里不得不提一句，<strong><em>Team Viewer</em></strong> 其实是一个很好用的远程软件，但是不知道为什么从 6 月开始突然大手笔的封杀了免费版，让我这个日常白嫖党，不禁有些措手不及。在尝试其他多款软件后，始终感觉效果不怎么样，于是，有了这次的实践。</p>
 </blockquote>
-<h1 id="frp的作用"><strong>Frp的作用</strong></h1>
+<h1 id="frp-的作用"><strong>Frp 的作用</strong></h1>
 <ul>
 <li>利用处于内网或防火墙后的机器，对外网环境提供 <strong>HTTP</strong> 或 <strong>HTTPS</strong> 服务。</li>
 <li>对于 <strong>HTTP</strong>, <strong>HTTPS</strong> 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个 80 端口。</li>
@@ -74,20 +74,20 @@
 </ul>
 <h1 id="搭建过程"><strong>搭建过程</strong></h1>
 <blockquote>
-<p>😝😝终于开始了，上面讲了好多我自己都看不懂的废话。不过，例行介绍还是有必要的。</p>
+<p>😝😝 终于开始了，上面讲了好多我自己都看不懂的废话。不过，例行介绍还是有必要的。</p>
 </blockquote>
-<p>首先，介绍一下我安装 Frp 的 VPS 及配置，服务器是 GCP 的香港节点，n1 配置，1vCPU 和 0.5G 内存。经过多次尝试，IP 段为 <em><strong>34.96.x.x</strong></em> ，在我这个小城市的联通延迟还是不错的，ping 大概维持在 70s-90s 上下。系统我选择的是 Ubuntu 18.04 版本。</p>
+<p>首先，介绍一下我安装 Frp 的 VPS 及配置，服务器是 GCP 的香港节点，f1 配置，1v CPU 和 0.5 G 内存。经过多次尝试，IP 段为 <strong><em>34.96.x.x</em></strong> ，在我这个小城市的联通延迟还是不错的，ping 大概维持在 70s-90s 上下。系统上我选择的是 Ubuntu 18.04 版本。</p>
 <h2 id="服务器端"><strong>服务器端</strong></h2>
 <h3 id="1下载程序"><strong>1.下载程序</strong></h3>
-<p>前往 Frp 的 <strong>Github releases</strong> 页面下载最新版的、对应你的 VPS 的处理器架构的包，地址：<a href="https://github.com/fatedier/Frp/releases"><strong>Frp内网穿透</strong></a> 。</p>
+<p>前往 Frp 的 <strong>Github releases</strong> 页面下载最新版的、对应你的 VPS 的处理器架构的包，地址：<a href="https://github.com/fatedier/Frp/releases"><strong>Frp 内网穿透</strong></a> 。</p>
 <p>其实目前大多数 VPS 主机商都是使用的 <strong>arm64</strong> 架构，所以下载时直接选择对应此架构的版本就可以。当然，如果不放心，也可以运行以下命令，查看一下你的 VPS 处理器架构：</p>
 <pre><code>1  arch
 </code></pre>
 <p>如果输出 <strong>x86_64</strong> 那么就说明是 <strong>arm64</strong>，即需要下载带 <strong>linux_amd64</strong> 的那个压缩包；如果输出的是其他的，则在文件列表中寻找 <strong>linux</strong> 的对应架构的压缩包。记住，右键复制链接。</p>
 <blockquote>
-<p>本文便以 <em><strong>arm64</strong></em> 架构举例，截止我写文时， <em><strong>Frp</strong></em> 最新版是 <em><strong>v0.33.0</strong></em> 。</p>
+<p>本文便以 <strong><em>arm64</em></strong> 架构举例，截止我写文时， <strong><em>Frp</em></strong> 最新版是 <strong><em>v0.33.0</em></strong> 。</p>
 </blockquote>
-<pre><code>1  ## 切换到你想要 Frp 存放的目录，此处我选择的是 /home 
+<pre><code>1  ## 切换到你想要 Frp 存放的目录，此处我选择的是 /home
 2  ## 不要问我为什么，我不懂 Linux 目录结构 ，不知道这个目录的含义
 3  ## 选择它纯粹是因为我搭建的时候看的教程是选择这个目录，你也可以选择其他的目录。
 4  cd /home
@@ -105,7 +105,7 @@
 <p>此处可以尝试运行一下，看看是否能正常运行：</p>
 <pre><code>1  ./frps -help
 </code></pre>
-<p>正常情况下，大概会出现一页的帮助文档信息，这里我就不截图或者 <strong>print</strong> 下来了，没多大必要，<s>当然不是我懒</s> 。倘若你没有出现帮助信息，那或许是你下载的版本不对。如果你真的按照我上面的的步骤一步一步下来的话，应该是没问题的，哼🤔！</p>
+<p>正常情况下，大概会出现一页的帮助文档信息，这里我就不截图或者 <strong>print</strong> 下来了，没多大必要，<s>当然不是我懒</s> 。倘若你没有出现帮助信息，那或许是你下载的版本不对。如果你真的按照我上面的的步骤一步一步下来的话，应该是没问题的，哼 🤔！</p>
 <h4 id="配置文件">配置文件</h4>
 <table>
 <thead>
@@ -136,7 +136,7 @@
 <p>理论上整个包中，只有这些文件是有用的。其他的 LICENSE 、frps_full.ini[完整版配置文件] 的基本用不到。</p>
 <h3 id="2配置程序"><strong>2.配置程序</strong></h3>
 <p>你可以参考以下配置说明来书写配置文件 <strong>frps.ini</strong>，我觉得可以先在电脑上打一份草稿，先列举自己的需求。<br>
-我这里列举了一些必要的、我用到的和你可能用到的配置，如果你想研究完整的配置说明可以看目录下的 <strong>frps_full.ini</strong> ，以及参考 <a href="https://github.com/fatedier/frp/blob/master/README_zh.md">Frp中文说明</a> 。</p>
+我这里列举了一些必要的、我用到的和你可能用到的配置，如果你想研究完整的配置说明可以看目录下的 <strong>frps_full.ini</strong> ，以及参考 <a href="https://github.com/fatedier/frp/blob/master/README_zh.md">Frp 中文说明</a> 。</p>
 <pre><code>1  ## 这是是表头，代表配置从这里开始
 2  [common]
 3  ## frp 服务端端口（必须），默认是7000，可以自定义
@@ -225,9 +225,9 @@
 </code></pre>
 <blockquote>
 <ul>
-<li>重启应用，<em><strong>sudo systemctl restart frps</strong></em></li>
-<li>停止应用，<em><strong>sudo systemctl stop frps</strong></em></li>
-<li>查看应用日志，<em><strong>sudo systemctl status frps</strong></em></li>
+<li>重启应用，<strong><em>sudo systemctl restart frps</em></strong></li>
+<li>停止应用，<strong><em>sudo systemctl stop frps</em></strong></li>
+<li>查看应用日志，<strong><em>sudo systemctl status frps</em></strong></li>
 </ul>
 </blockquote>
 <h3 id="题外话">题外话</h3>
@@ -284,7 +284,10 @@
 <p>将下载的对应你的远程主机版本的 <strong>frpc</strong> 客户端文件，解压在一个方便的位置，例如我的存放位置在</p>
 <pre><code>c:/frp
 </code></pre>
-<p>在当前文件夹，按住 <strong><code>shfit</code></strong> + <strong><code>鼠标右键</code></strong> ，在出现的右键菜单中选择 <strong><code>从此处打开 PowerShell 窗口</code></strong> ，也有可能是 <strong><code>从此处打开 CMD 窗口</code></strong> ,如果出现的是如下结果，则说明frp客户端启动成功。</p>
+<p>在当前文件夹，按住 <strong><code>shfit</code></strong> + <strong><code>鼠标右键</code></strong> ，在出现的右键菜单中选择 <strong><code>从此处打开 PowerShell 窗口</code></strong> ，也有可能是 <strong><code>从此处打开 CMD 窗口</code></strong> ，并执行</p>
+<pre><code>./frpc -c frpc.ini
+</code></pre>
+<p>如果出现的是如下结果，则说明 frp 客户端启动成功。</p>
 <pre><code>PS C:\frp&gt; ./frpc -c frpc.ini
 2020/06/16 16:25:19 [I] [service.go:282] [34gd169d91sffsa6] login to server success, get run id [34gd169d91sffsa6], server udp port [0]
 2020/06/16 16:25:19 [I] [proxy_manager.go:144] [34gd169d91sffsa6] proxy added: [RDP]
@@ -294,8 +297,8 @@
 <h3 id="3开机自启"><strong>3.开机自启</strong></h3>
 <p>关于 Windows 客户端如何开机自启，网上也有很多方式，什么脚本啊、注册服务啊，多不胜数，这里我介绍一种使用非常简单的方式，纯粹的可视化图形交互界面，简单几步就能将程序注册为系统服务。</p>
 <h4 id="1下载软件">（1）下载软件</h4>
-<p>下载地址：<a href="https://cloud.189.cn/t/ieiUFv7fEJB3"><strong>SrvanyUI</strong></a>  访问码：<strong>wl5f</strong></p>
-<p>Srvany是微软套件的一个小工具,可以手动将程序或其他可执行文件注册为系统服务。但是操作涉及到注册表操作，使用颇为不便。而SrvanyUI是一位大神，封装简化的可视化工具，将原本繁琐的操作，点击几下键盘就能完成。</p>
+<p>下载地址：<a href="https://cloud.189.cn/t/ieiUFv7fEJB3"><strong>SrvanyUI</strong></a> 访问码：<strong>wl5f</strong></p>
+<p>Srvany 是微软套件的一个小工具,可以手动将程序或其他可执行文件注册为系统服务。但是操作涉及到注册表操作，使用颇为不便。而 SrvanyUI 是一位大神，封装简化的可视化工具，将原本繁琐的操作，点击几下键盘就能完成。</p>
 <p>下载完成后，将程序放在一个比较顺手的文件夹，</p>
 <h4 id="2-创建服务">(2) 创建服务</h4>
 <p>打开 <strong>SrvanyUI</strong> ，截图如下：</p>
@@ -311,12 +314,12 @@
 <blockquote>
 <ul>
 <li>官方配置使用说明：<a href="https://github.com/fatedier/frp/blob/master/README_zh.md">https://github.com/fatedier/frp/blob/master/README_zh.md</a></li>
-<li>frp官方中文文档：<a href="https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html">https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html</a></li>
-<li>Frp内网穿透工具的搭建和使用方法：<a href="https://code.skyheng.com/post/52586.html">https://code.skyheng.com/post/52586.html</a></li>
+<li>frp 官方中文文档：<a href="https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html">https://www.cnblogs.com/sanduzxcvbnm/p/8508741.html</a></li>
+<li>Frp 内网穿透工具的搭建和使用方法：<a href="https://code.skyheng.com/post/52586.html">https://code.skyheng.com/post/52586.html</a></li>
 <li>使用 FRP 反向代理实现 Windows 远程连接：<a href="https://www.cnblogs.com/zhanggaoxing/p/9221705.html">https://www.cnblogs.com/zhanggaoxing/p/9221705.html</a></li>
 <li>用开源免费的内网穿透工具 frp，实现远程桌面和文件传输 - 少数派：<a href="https://sspai.com/post/60852">https://sspai.com/post/60852</a></li>
-<li>FRP内网穿透Windows远程桌面：<a href="https://www.cnblogs.com/ingxx/p/12255241.html">https://www.cnblogs.com/ingxx/p/12255241.html</a></li>
-<li>SrvanyUI服务管理工具发布：<a href="https://wangye.org/blog/archives/644/">https://wangye.org/blog/archives/644/</a></li>
+<li>FRP 内网穿透 Windows 远程桌面：<a href="https://www.cnblogs.com/ingxx/p/12255241.html">https://www.cnblogs.com/ingxx/p/12255241.html</a></li>
+<li>SrvanyUI 服务管理工具发布：<a href="https://wangye.org/blog/archives/644/">https://wangye.org/blog/archives/644/</a></li>
 </ul>
 </blockquote>
 </div>
