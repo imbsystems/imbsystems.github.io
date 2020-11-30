@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.imbsystems.com</id>
-    <title>故城旧马</title>
-    <updated>2020-07-13T15:48:16.932Z</updated>
+    <title>江湖鹿原</title>
+    <updated>2020-11-30T14:45:42.478Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.imbsystems.com"/>
     <link rel="self" href="https://www.imbsystems.com/atom.xml"/>
     <subtitle>故城旧马，余心余话。</subtitle>
     <logo>https://www.imbsystems.com/images/avatar.png</logo>
     <icon>https://www.imbsystems.com/favicon.ico</icon>
-    <rights>All rights reserved 2020, 故城旧马</rights>
+    <rights>All rights reserved 2020, 江湖鹿原</rights>
     <entry>
         <title type="html"><![CDATA[渴望又不可及]]></title>
         <id>https://www.imbsystems.com/post/love/</id>
