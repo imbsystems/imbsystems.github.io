@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.imbsystems.com</id>
-    <title>江湖鹿原</title>
-    <updated>2020-12-27T05:09:07.587Z</updated>
+    <title>三无亦拾吾</title>
+    <updated>2021-02-24T10:56:37.426Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.imbsystems.com"/>
     <link rel="self" href="https://www.imbsystems.com/atom.xml"/>
-    <subtitle>故城旧马，余心余话。</subtitle>
+    <subtitle>三无，无房无车无......；亦，也；拾，捡起，收拾，整顿；吾，我。</subtitle>
     <logo>https://www.imbsystems.com/images/avatar.png</logo>
     <icon>https://www.imbsystems.com/favicon.ico</icon>
-    <rights>All rights reserved 2020, 江湖鹿原</rights>
+    <rights>All rights reserved 2021, 三无亦拾吾</rights>
     <entry>
         <title type="html"><![CDATA[剁手]]></title>
         <id>https://www.imbsystems.com/post/YQT7qH-kt/</id>
