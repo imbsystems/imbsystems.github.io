@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://www.imbsystems.com</id>
+    <id>https://www.icecome.com</id>
     <title>三无亦拾吾</title>
-    <updated>2021-02-24T16:26:09.862Z</updated>
+    <updated>2021-05-30T17:34:09.668Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://www.imbsystems.com"/>
-    <link rel="self" href="https://www.imbsystems.com/atom.xml"/>
+    <link rel="alternate" href="https://www.icecome.com"/>
+    <link rel="self" href="https://www.icecome.com/atom.xml"/>
     <subtitle>三无，无房无车无......；亦，也；拾，捡起，收拾，整理；吾，我。</subtitle>
-    <logo>https://www.imbsystems.com/images/avatar.png</logo>
-    <icon>https://www.imbsystems.com/favicon.ico</icon>
+    <logo>https://www.icecome.com/images/avatar.png</logo>
+    <icon>https://www.icecome.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 三无亦拾吾</rights>
     <entry>
+        <title type="html"><![CDATA[新年第一篇]]></title>
+        <id>https://www.icecome.com/post/EJzg9VNrq/</id>
+        <link href="https://www.icecome.com/post/EJzg9VNrq/">
+        </link>
+        <updated>2021-02-24T16:27:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>从大的角度来看，今年的春节和往常没什么不同。</p>
+<p>💔可从我家来看，变化又很大。以往三个人的春节，变成了两个人。<br>
+他，永远的离开了我们母子俩，永远停留在了 <em>2020</em> 年。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>从大的角度来看，今年的春节和往常没什么不同。</p>
+<p>💔可从我家来看，变化又很大。以往三个人的春节，变成了两个人。<br>
+他，永远的离开了我们母子俩，永远停留在了 <em>2020</em> 年。</p>
+<!-- more -->
+<h3 id="除夕夜">除夕夜</h3>
+<p>做了四个菜，炖带鱼，木须肉，超市买的熏肠，炖鸡块。<br>
+可我们却没什么胃口。</p>
+<h3 id="初一">初一</h3>
+<p>🤝由于疫情的缘故，没有去串门拜年。这让我松了一口气。<br>
+🙌早晨，先去了大爷家，老叔家。<br>
+🙏然后是上坟，可是忘了给我爸带酒，只好点了几根烟。<br>
+😭游庙，锣鼓喧天。如果我爸还在的话，他也是围观的一员吧。</p>
+<h3 id="初二">初二</h3>
+<p>💻打游戏。</p>
+<h3 id="初三">初三</h3>
+<p>📞本来今天应该去姥姥姥爷家，但是年前刚刚去过了，所以我妈就说算了，不去了。</p>
+<h3 id="初四-初五">初四、初五</h3>
+<p>💻打游戏。</p>
+<h3 id="初六">初六</h3>
+<p>✋最后一天了，收拾收拾东西，该去上班了。</p>
+<h3 id="初十">初十</h3>
+<p>🏘年前就说好的，过了年，把妈妈接到身边来。于是回来这几天都在找房子。今天看了一个房子，比前几个都破。但是相对上班的地方很近，而且周围好几个大商场。所以，没有再挑剔，直接租下了。况且，只是小区老，外表破，其实屋内还是很凑合的。</p>
+<h3 id="十一">十一</h3>
+<p>📞出租屋没有宽带，于是联系了熟悉的人想办理一个低资费的宽带，但是开通的话需要新开两个手机号，而我的身份证下只有一个位置了，所以暂时不能办理。其他几个都是以前公司需要而办理的测试卡，需要联系人去转移或者注销了。</p>
+<h3 id="十三">十三</h3>
+<p>今天联系了一个相关的负责人，得到消息，已经提交迁移工单了，预计周五才能释放多余的号码。看来这几天是不能装好宽带了，也暂时搬不进去了。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[剁手]]></title>
-        <id>https://www.imbsystems.com/post/YQT7qH-kt/</id>
-        <link href="https://www.imbsystems.com/post/YQT7qH-kt/">
+        <id>https://www.icecome.com/post/YQT7qH-kt/</id>
+        <link href="https://www.icecome.com/post/YQT7qH-kt/">
         </link>
         <updated>2020-12-27T05:07:01.000Z</updated>
         <summary type="html"><![CDATA[<p>😀25 日京东新购机械键盘一副，299，今日取到手。</p>
@@ -27,8 +65,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[渴望又不可及]]></title>
-        <id>https://www.imbsystems.com/post/love/</id>
-        <link href="https://www.imbsystems.com/post/love/">
+        <id>https://www.icecome.com/post/love/</id>
+        <link href="https://www.icecome.com/post/love/">
         </link>
         <updated>2020-07-13T15:31:49.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="关于爱情-️">关于爱情 ❤️</h2>
@@ -64,8 +102,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[记录一次动手实践 之 搭建FRP穿透服务，实现远程桌面]]></title>
-        <id>https://www.imbsystems.com/post/2020_06_16_frp/</id>
-        <link href="https://www.imbsystems.com/post/2020_06_16_frp/">
+        <id>https://www.icecome.com/post/2020_06_16_frp/</id>
+        <link href="https://www.icecome.com/post/2020_06_16_frp/">
         </link>
         <updated>2020-06-16T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>自从建了这个主页，一直没想好写什么东西，正巧碰上远程连接软件 <strong>Team Viewer</strong> 无法使用的情况， 在对比了多个远程连接软件后，选择了 <strong>Frp</strong> 作为解决我目前困境的一个方式的同时，也想记录下本次搭建的过程。</p>
@@ -338,8 +376,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Wrold!]]></title>
-        <id>https://www.imbsystems.com/post/hello-wrold/</id>
-        <link href="https://www.imbsystems.com/post/hello-wrold/">
+        <id>https://www.icecome.com/post/hello-wrold/</id>
+        <link href="https://www.icecome.com/post/hello-wrold/">
         </link>
         <updated>2020-05-24T10:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏思考了好久，才又写下这些。</p>
